@@ -14,17 +14,10 @@ Boilerplate code for quick setup for CRUD applications using express/knex/mysql/
 8. npm run test
 9. modify code to suit your needs
 
-## Setup PostgreSQL
-
-### Homebrew (for macOS users)
-
-If you dont have mysql follow this link (Follow directions until you're able to get into psql utility): https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
-
 #### Create dev and test database (Mac)
 
-In terminal run the following commands:
+In mysql worckbanch run the following commands:
 
-1. `psql` -- To get into postgreSQL utility
 2. `CREATE DATABASE dbname;` -- Creates development server
 3. `CREATE DATABASE dbname-test;` -- Creates testing server
 4. `\q`
