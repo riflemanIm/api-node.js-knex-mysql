@@ -2,9 +2,9 @@ module.exports = {
   development: {
     client: "mysql",
     connection: {
-      host: "openvpn.ru",
-      user: "beta2ope_n",
-      password: "QQR5X5JqsnIX",
+      host: "127.0.0.1",
+      user: "root",
+      password: "rockcity",
       database: "heyo",
     },
     migrations: {
