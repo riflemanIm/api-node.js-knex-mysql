@@ -1,13 +1,11 @@
-require("dotenv").config();
-
 module.exports = {
   development: {
     client: "mysql",
     connection: {
-      host: process.env.MYSQL_DEV_HOST,
-      user: process.env.MYSQL_DEV_USER,
-      password: process.env.MYSQL_DEV_PASSWORD,
-      database: process.env.MYSQL_DEV_DATABASE,
+      host: "openvpn.ru",
+      user: "beta2ope_n",
+      password: "QQR5X5JqsnIX",
+      database: "heyo",
     },
     migrations: {
       directory: "./database/migrations",

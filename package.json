@@ -1,12 +1,15 @@
 {
-  "name": "api-node.js-knex-mysql",
+  "name": "api-nodejs-knex-mysql",
   "version": "1.0.0",
   "description": "Boilerplate code for quick setup for CRUD applications using express/knex/mysql",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "test": "DB_ENV=testing jest --watch --verbose",
     "server": "nodemon index.js",
-    "start": "node index.js"
+    "start": "nodemon node index.js"
   },
   "jest": {
     "testEnvironment": "node"
@@ -31,9 +34,10 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {
+    "@now/node": "^1.7.1",
     "cross-env": "^6.0.3",
     "jest": "^24.9.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.4",
     "supertest": "^4.0.2"
   }
 }
