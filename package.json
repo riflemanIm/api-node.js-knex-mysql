@@ -1,7 +1,7 @@
 {
   "name": "api-nodejs-knex-mysql",
   "version": "1.0.0",
-  "description": "Boilerplate code for quick setup for CRUD applications using express/knex/mysql",
+  "description": "REST API code for quick setup for CRUD applications using express/knex/mysql",
   "main": "index.js",
   "engines": {
     "node": "12.x"
@@ -22,7 +22,7 @@
     "url": "git+https://github.com/riflemanIm/api-node.js-knex-mysql.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Oleg Lambin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/riflemanIm/api-node.js-knex-mysql/issues"

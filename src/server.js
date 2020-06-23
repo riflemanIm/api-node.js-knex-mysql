@@ -3,8 +3,8 @@ import morgan from "morgan";
 import cors from "cors";
 import bodyParser from "body-parser";
 import "./auth/auth";
-import usersRouter from "./routes/users-router.js";
-import userRouter from "./routes/user-sing";
+import usersRouter from "./routes/users-crud.js";
+import userSignInUpRouter from "./routes/user-sing-in-up";
 
 const server = express();
 
@@ -22,7 +22,7 @@ server.use(morgan("dev"));
 
 // Routers
 server.use("/api/users", usersRouter);
-server.use("/api/user", userRouter);
+server.use("/api/user", userSignInUpRouter);
 
 //Routes
 server.get("/", (req, res) => {
