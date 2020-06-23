@@ -1,10 +1,10 @@
 import jwt from "jsonwebtoken";
-import config from "../config";
+import config from "../config/config";
 
-const jwtSign = function(data) {
-  return jwt.sign(data, config.secret_key, {expiresIn: '6h'});
+const jwtSign = function (data) {
+  return jwt.sign(data, config.secret_key, { expiresIn: "6h" });
 };
 
 module.exports = {
-  jwtSign
+  jwtSign,
 };

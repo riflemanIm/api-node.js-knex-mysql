@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+console.log("process.env.MYSQL_DEV_HOST", process.env.MYSQL_DEV_HOST);
+
 module.exports = {
   development: {
     client: "mysql",
@@ -10,10 +12,10 @@ module.exports = {
       database: process.env.MYSQL_DEV_DATABASE,
     },
     migrations: {
-      directory: "./database/migrations",
+      directory: "./src/database/migrations",
     },
     seeds: {
-      directory: "./database/seeds",
+      directory: "./src/database/seeds",
     },
   },
 };

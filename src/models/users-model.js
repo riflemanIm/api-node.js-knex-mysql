@@ -6,7 +6,7 @@ const find = () => {
 };
 
 // GET SPECIFIC USER BY ID
-const findById = id => {
+const findById = (id) => {
   return db("users").where("id", id);
 
   //SQL RAW METHOD
@@ -14,23 +14,27 @@ const findById = id => {
   //                  WHERE id = ${id}`);
 };
 
+// GET SPECIFIC USER BY EMAIL
+const findByEmail = (email) => {
+  return db("users")
+    .where("email", email)
+    .first()
+    .then((row) => row);
+};
+
 // ADD A USER
-const addUser = user => {
+const addUser = (user) => {
   return db("users").insert(user, "id");
 };
 
 // UPDATE USER
 const updateUser = (id, post) => {
-  return db("users")
-    .where("id", id)
-    .update(post);
+  return db("users").where("id", id).update(post);
 };
 
 // REMOVE USER
-const removeUser = id => {
-  return db("users")
-    .where("id", id)
-    .del();
+const removeUser = (id) => {
+  return db("users").where("id", id).del();
 };
 
 module.exports = {
@@ -38,5 +42,6 @@ module.exports = {
   findById,
   addUser,
   updateUser,
-  removeUser
+  removeUser,
+  findByEmail,
 };
