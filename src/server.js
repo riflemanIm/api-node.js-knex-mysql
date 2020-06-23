@@ -1,10 +1,9 @@
-const express = require("express");
+import express from "express";
+import morgan from "morgan";
+import cors from "cors";
+import usersRouter from "./routes/users-router.js";
+
 const server = express();
-
-const morgan = require("morgan");
-const cors = require("cors");
-
-const usersRouter = require("./routes/users-router.js");
 
 // Middleware
 server.use(cors());

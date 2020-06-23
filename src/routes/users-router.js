@@ -1,6 +1,7 @@
-const router = require("express").Router();
+import express from "express";
+import usersDB from "../models/users-model.js";
 
-const usersDB = require("../models/users-model.js");
+const router = express.Router();
 
 // GET ALL USERS
 router.get("/", async (req, res) => {
