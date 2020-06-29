@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import passport from "passport";
 import usersDB from "../models/users-model";
 import config from "../config/config";
-import helpers from "../helpers/helpers";
+import { jwtSign, md5Compare } from "../helpers/helpers";
 
 const router = express.Router();
 
@@ -41,28 +41,48 @@ router.post("/signin/local", async (req, res) => {
 
   try {
     const user = await usersDB.findByEmail(req.body.email);
-    console.log("\n---- user ---- \n", user);
+    console.log(
+      "\n---- user ---- \n",
+      user,
+      "\n req.body.password \n",
+      req.body.password
+    );
     if (!user) {
       res
         .status(404)
         .json({ err: "The user with the specified email does not exist" });
     } else {
-      bcrypt.compare(req.body.password, user.password).then((equal) => {
-        if (equal) {
-          const body = {
-            id: user.id,
-            email: user.email,
-          };
-          const token = helpers.jwtSign({ user: body });
-          res.json({
-            user,
-            success: true,
-            token,
-          });
-        } else {
-          res.status(400).send("Wrong password");
-        }
-      });
+      if (md5Compare(req.body.password, user.pass)) {
+        const body = {
+          id: user.id,
+          email: user.email,
+        };
+        const token = jwtSign({ user: body });
+        res.json({
+          user,
+          success: true,
+          token,
+        });
+      } else {
+        res.status(400).send("Wrong password");
+      }
+
+      // bcrypt.compare(req.body.password, user.password).then((equal) => {
+      //   if (equal) {
+      //     const body = {
+      //       id: user.id,
+      //       email: user.email,
+      //     };
+      //     const token = jwtSign({ user: req.body });
+      //     res.json({
+      //       user,
+      //       success: true,
+      //       token,
+      //     });
+      //   } else {
+      //     res.status(400).send("Wrong password");
+      //   }
+      // });
     }
   } catch (err) {
     res.status({ err: "The user information could not be retrieved" });
@@ -80,7 +100,7 @@ router.post("/signin/local", async (req, res) => {
   //             id: user.id,
   //             email: user.email,
   //           };
-  //           const token = helpers.jwtSign({ user: body });
+  //           const token = jwtSign({ user: body });
   //           res.json({
   //             user,
   //             success: true,

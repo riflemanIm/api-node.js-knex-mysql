@@ -6,6 +6,7 @@ const router = express.Router();
 // GET ALL USERS
 router.get("/", async (req, res) => {
   try {
+    console.log("GET ALL USERS");
     const users = await usersDB.find();
     res.status(200).json(users);
   } catch (err) {

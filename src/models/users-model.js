@@ -2,21 +2,21 @@ const db = require("../config/dbConfig.js");
 
 // GET ALL USERS
 const find = () => {
-  return db("users");
+  return db("user");
 };
 
 // GET SPECIFIC USER BY ID
 const findById = (id) => {
-  return db("users").where("id", id);
+  return db("user").where("id", id);
 
   //SQL RAW METHOD
   // return db.raw(`SELECT * FROM users
   //                  WHERE id = ${id}`);
 };
 
-// GET SPECIFIC USER BY EMAIL
+// GET SPECIFIC ACCOUNT BY EMAIL
 const findByEmail = (email) => {
-  return db("users")
+  return db("account")
     .where("email", email)
     .first()
     .then((row) => row);
@@ -29,12 +29,12 @@ const addUser = (user) => {
 
 // UPDATE USER
 const updateUser = (id, post) => {
-  return db("users").where("id", id).update(post);
+  return db("user").where("id", id).update(post);
 };
 
 // REMOVE USER
 const removeUser = (id) => {
-  return db("users").where("id", id).del();
+  return db("user").where("id", id).del();
 };
 
 module.exports = {

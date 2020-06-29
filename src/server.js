@@ -18,11 +18,11 @@ server.use(
 
 server.use(cors());
 server.use(morgan("dev"));
-//server.use(express.json());
+server.use(express.json());
 
 // Routers
 server.use("/api/users", usersRouter);
-server.use("/api/user", userSignInUpRouter);
+server.use("/api/auth", userSignInUpRouter);
 
 //Routes
 server.get("/", (req, res) => {

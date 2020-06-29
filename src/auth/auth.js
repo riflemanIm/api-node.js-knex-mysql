@@ -1,5 +1,5 @@
 import config from "../config/config";
-import helpers from "../helpers/helpers";
+import { jwtSign } from "../helpers/helpers";
 import db from "../models/users-model";
 
 const passport = require("passport");
@@ -41,7 +41,7 @@ passport.use(
       //     name: profile.displayName,
       //     avatar: profile.picture
       //   };
-      //   const token = helpers.jwtSign({user: body});
+      //   const token = jwtSign({user: body});
       //   return done(null, {token});
       // });
     }

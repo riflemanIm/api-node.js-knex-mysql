@@ -11,7 +11,7 @@
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
     "test": "DB_ENV=testing jest --watch --verbose",
-    "server": "nodemon ./src/index.js",
+    "server": "nodemon ./dist/index.js",
     "start": "nodemon --exec babel-node src/index.js"
   },
   "jest": {
@@ -29,12 +29,14 @@
   },
   "homepage": "https://github.com/riflemanIm/api-node.js-knex-mysql#readme",
   "dependencies": {
+    "5": "^0.0.1",
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.4",
+    "md5": "^2.2.1",
     "morgan": "^1.9.1",
     "mysql": "^2.18.1",
     "passport": "^0.4.1",
