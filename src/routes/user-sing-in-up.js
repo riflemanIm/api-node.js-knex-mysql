@@ -1,7 +1,7 @@
 import express from "express";
 import bcrypt from "bcrypt";
 import passport from "passport";
-import usersDB from "../models/users-model";
+import { findByEmail } from "../models/account-model";
 import config from "../config/config";
 import { jwtSign, md5Compare } from "../helpers/helpers";
 
@@ -40,7 +40,7 @@ router.post("/signin/local", async (req, res) => {
   console.log("\n---- sign in ---- \n", req.body);
 
   try {
-    const user = await usersDB.findByEmail(req.body.email);
+    const user = await findByEmail(req.body.email);
     console.log(
       "\n---- user ---- \n",
       user,

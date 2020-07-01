@@ -1,16 +1,17 @@
 import express from "express";
 import usersDB from "../models/users-model.js";
+import { use } from "passport";
 
 const router = express.Router();
 
 // GET ALL USERS
 router.get("/", async (req, res) => {
   try {
-    console.log("GET ALL USERS");
     const users = await usersDB.find();
+    // console.log("GET ALL USERS\n\n", users);
     res.status(200).json(users);
   } catch (err) {
-    res.status(500).json({ err: err });
+    res.status(500).json({ err });
   }
 });
 
@@ -25,6 +26,24 @@ router.get("/:id", async (req, res) => {
         .json({ err: "The user with the specified id does not exist" });
     } else {
       res.status(200).json(user);
+    }
+  } catch (err) {
+    res.status({ err: "The user information could not be retrieved" });
+  }
+});
+
+// GET USER PHOTO BY ID
+router.get("/photo/:id", async (req, res) => {
+  const userId = req.params.id;
+  try {
+    const data = await usersDB.photoById(userId);
+    if (!data) {
+      res
+        .status(404)
+        .json({ err: "The user PHOTO with the specified id does not exist" });
+    } else {
+      res.contentType("image/jpeg");
+      res.send(data[0].photo);
     }
   } catch (err) {
     res.status({ err: "The user information could not be retrieved" });
