@@ -4,6 +4,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import "./auth/auth";
 import usersRouter from "./routes/users-crud.js";
+import clinicRouter from "./routes/clinic-crud.js";
 import userSignInUpRouter from "./routes/user-sing-in-up";
 
 const server = express();
@@ -22,7 +23,11 @@ server.use(express.json());
 
 // Routers
 server.use("/api/users", usersRouter);
+server.use("/api/clinics", clinicRouter);
 server.use("/api/auth", userSignInUpRouter);
+
+//Serves all the request which includes /images in the url from Images folder
+server.use("/images", express.static(__dirname + "/../images"));
 
 //Routes
 server.get("/", (req, res) => {
