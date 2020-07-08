@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
         .status(404)
         .json({ err: "The user with the specified id does not exist" });
     } else {
-      res.status(200).json(user);
+      res.status(200).json(user[0]);
     }
   } catch (err) {
     res.status({ err: "The user information could not be retrieved" });
@@ -68,12 +68,14 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   const userId = req.params.id;
-  const newChanges = req.body;
-  if (!newChanges.name) {
+  const newChanges = req.body.data;
+
+  if (!newChanges.first_name) {
     res.status(404).json({ err: "You are missing information" });
   } else {
     try {
       const addChanges = await usersDB.updateUser(userId, newChanges);
+      console.log("addChanges", addChanges);
       res.status(200).json(addChanges);
     } catch (err) {
       res.status(500).json({ err: "Error in updating user" });

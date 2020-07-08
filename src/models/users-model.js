@@ -35,22 +35,18 @@ const findById = (id) => {
     .select(
       "u.user_id",
       "u.username",
+      "u.phone",
       "u.notify_email",
-      "e.birth_date",
-      "u.cdate",
       "e.first_name",
-      "e.gender",
       "e.last_name",
       "e.middle_name",
-      "e.photo"
+      "e.gender",
+      "e.birth_date",
+      "u.cdate"
     )
     .from("user as u")
     .leftJoin("emr_group as e", "u.user_id", "e.user_id")
     .where("u.user_id", id);
-
-  //SQL RAW METHOD
-  // return db.raw(`SELECT * FROM users
-  //                  WHERE id = ${id}`);
 };
 
 // ADD A USER
@@ -60,7 +56,29 @@ const addUser = (user) => {
 
 // UPDATE USER
 const updateUser = (id, post) => {
-  return db("user").where("user_id", id).update(post);
+  //return db("user").where("user_id", id).update(post);
+
+  const userPost = {
+    // user_id: post.user_id,
+    // username: post.username,
+    phone: post.phone,
+    notify_email: post.notify_email,
+  };
+
+  const emrGroupPost = {
+    first_name: post.first_name,
+    last_name: post.last_name,
+    middle_name: post.middle_name,
+    gender: post.gender,
+    birth_date: post.birth_date,
+  };
+
+  const user = db("user").where("user_id", id).update(userPost);
+  console.log("---------------\n userPost", userPost);
+
+  const emr_group = db("emr_group").where("user_id", id).update(emrGroupPost);
+  console.log("---------------\n emrGroupPost", emrGroupPost);
+  return Promise.all([user, emr_group]); // Once every query is written
 };
 
 // REMOVE USER
