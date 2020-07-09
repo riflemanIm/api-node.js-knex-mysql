@@ -24,10 +24,28 @@ const find = () => {
     .from("user as u")
     .leftJoin("emr_group as e", "u.user_id", "e.user_id")
     .distinct()
-    .whereNot("e.photo", null)
-    .limit(100);
+    //.whereNot("e.photo", null)
+    .orderBy("u.user_id", "desc")
+    .limit(10);
   return r;
 };
+
+// CHECK username  not for current user
+const findUsernameNotCurUser = (id, username) =>
+  db("user")
+    .whereNot("user_id", id)
+    .where("username", username)
+    .first()
+    .then((row) => row.username)
+    .catch(() => null);
+
+// just CHECK username
+const findUsername = (username) =>
+  db("user")
+    .where("username", username)
+    .first()
+    .then((row) => row.username)
+    .catch(() => null);
 
 // GET SPECIFIC USER BY ID
 const findById = (id) => {
@@ -51,7 +69,44 @@ const findById = (id) => {
 
 // ADD A USER
 const addUser = (user) => {
-  return db("users").insert(user, "user_id");
+  //  return db("user").insert(user, "user_id");
+  const cdate = new Date().toISOString().slice(0, 19).replace("T", " ");
+  return db.transaction(function (trx) {
+    db("user")
+      .transacting(trx)
+      .insert({ ...user, cdate })
+      .then(function (res) {
+        const [user_id] = res;
+
+        //const cdate = new Date().toISOString().split("T")[0];
+        console.log("--- user_id ---", user_id, "cdate", cdate);
+        return db("emr_group")
+          .insert({
+            user_id,
+            cdate,
+          })
+          .then((r) => {
+            console.log("--- r ---", r);
+            return db("emr_group")
+              .where("emr_group_id", r[0])
+              .first()
+              .then((row) => row.user_id)
+              .catch(() => null);
+          });
+      })
+      .then(trx.commit)
+      .catch(trx.rollback);
+  });
+};
+
+// SAVE USER AVATAR
+const saveUserAvatar = (id, photo) => {
+  console.log(id, "\n ------- avatar ------\n", photo);
+  return db("emr_group").where("user_id", id).update({ photo });
+};
+// REMOVE USER AVATAR
+const removeUserAvatar = (id) => {
+  return db("emr_group").where("user_id", id).update({ photo: null });
 };
 
 // UPDATE USER
@@ -60,7 +115,7 @@ const updateUser = (id, post) => {
 
   const userPost = {
     // user_id: post.user_id,
-    // username: post.username,
+    username: post.username,
     phone: post.phone,
     notify_email: post.notify_email,
   };
@@ -83,7 +138,13 @@ const updateUser = (id, post) => {
 
 // REMOVE USER
 const removeUser = (id) => {
-  return db("user").where("user_id", id).del();
+  return db("user")
+    .where("user_id", id)
+    .del()
+    .then((r) => {
+      return db("emr_group").where("user_id", id).del();
+    })
+    .catch((e) => e);
 };
 
 module.exports = {
@@ -93,4 +154,8 @@ module.exports = {
   updateUser,
   removeUser,
   photoById,
+  findUsernameNotCurUser,
+  saveUserAvatar,
+  removeUserAvatar,
+  findUsername,
 };
