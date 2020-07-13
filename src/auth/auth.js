@@ -1,6 +1,6 @@
 import config from "../config/config";
 import { jwtSign } from "../helpers/helpers";
-import db from "../models/users-model";
+//import db from "../models/account-model";
 
 const passport = require("passport");
 const JWTstrategy = require("passport-jwt").Strategy;

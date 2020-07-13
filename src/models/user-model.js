@@ -127,13 +127,16 @@ const updateUser = (id, post) => {
     gender: post.gender,
     birth_date: post.birth_date,
   };
-
-  const user = db("user").where("user_id", id).update(userPost);
   console.log("---------------\n userPost", userPost);
-
-  const emr_group = db("emr_group").where("user_id", id).update(emrGroupPost);
-  console.log("---------------\n emrGroupPost", emrGroupPost);
-  return Promise.all([user, emr_group]); // Once every query is written
+  return db("user")
+    .where("user_id", id)
+    .update(userPost)
+    .then((r) => {
+      if (r) {
+        console.log("---------------\n emrGroupPost", emrGroupPost);
+        return db("emr_group").where("user_id", id).update(emrGroupPost);
+      }
+    });
 };
 
 // REMOVE USER

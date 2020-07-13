@@ -1,5 +1,5 @@
 import express from "express";
-import usersDB from "../models/users-model.js";
+import usersDB from "../models/user-model.js";
 import { use } from "passport";
 import multer from "multer";
 const upload = multer();
