@@ -9,7 +9,6 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   try {
     const regions = await regionsDB.find();
-    // console.log("GET ALL REGION\n\n", regions);
     res.status(200).json(regions);
   } catch (err) {
     res.status(500).json({ err });
@@ -51,9 +50,8 @@ router.put("/:id", async (req, res) => {
   const newChanges = req.body.data;
 
   try {
-    console.log("\n\n\n regionnameElse '" + newChanges + "' \n\n\n");
     const addChanges = await regionsDB.updateRegion(regionId, newChanges);
-    console.log("\n addChanges\n", addChanges);
+    console.log("\n addChanges\n", regionId, addChanges);
     res.status(200).json(addChanges);
   } catch (err) {
     res.status(500).json({ err: "Error in updating region" });

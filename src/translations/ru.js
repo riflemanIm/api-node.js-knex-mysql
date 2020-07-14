@@ -1,0 +1,146 @@
+export default {
+  translations: {
+    SIGN: {
+      IN_BUTTON: "Вход в систему",
+      IN_HEAD: "Портал MobiMed.ru для Вас и Вашей семьи",
+      IN_TEXT:
+        "Портал MobiMed.ru - это новейший веб-сервис для тех, кто дорожит своим здоровьем и временем, заботится о своих близких. С помощью MobiMed.ru Вы можете безопасно и эффективно управлять своими медицинскими картами, записываться на консультации и лечебно-диагностические мероприятия для себя и для членов семьи из любой географической точки с доступом в интернет.",
+      IN_ERRORS: "Что-то не так с вашим логином или паролем :(",
+      IN_FOGOT_PASS: "Забыли пароль?",
+      UP_BUTTON: "Регистрация",
+      UP_EMPTY_EMAIL: "Введите email",
+      UP_NOT_VALID_EMAIL: "Некорректный email",
+      UP_EMPTY_PASS: "Введите пароль",
+      UP_NOT_VALID_PASS:
+        "Пароль должен содержать хотя бы одно число, хотя бы одну латинскую букву в нижнем и верхнем регистре и должен быть не менее, чем из 7 символов ",
+      UP_NOT_MATCH_PASS: "Пароли не совпадают",
+      UP_CONFIRM_CODE: "Код подтверждения регистрации",
+      UP_SUBMIT_CONFIRM: "Подтвердить",
+      UP_OK: "Успешная регистрация",
+      UP_WRONG_LOG_OR_PASS: "Комбинация Email или пароль не верна",
+      UP_EMAIL_ALREADY_REG: "Такой email уже зарегистрирован",
+      UP_AGEEMENT: "Я принимаю условия соглашения",
+      UP_BUTTON_SUBMIT: "Создать аккаунт",
+      UP_TITLE_LIC_AGR: "Лицензионное соглашение",
+      UP_MAY_LOGIN:
+        "Комбинация Email или Пароль совпали, можете войти в систему",
+
+      CH_PASS_BUTTON: "Смена пароля",
+      CH_CONFIRM_CODE: "Код подтверждения смены пароля",
+      CH_CONFIRM_CODE_SENT:
+        "Код для подтверждения смены пароля выслан на email",
+      CH_PASS_OK: "Успешная смена пароля",
+      CH_PASS_ACCOUNT_NOT_FOUND: "Такой email или логин не существуют",
+      CH_BUTTON_SUBMIT: "Сменить пароль",
+    },
+
+    HEADER: {
+      MESSAGES: "Сообщения",
+      CONT_NEW_MSS: "{{unreadCount}} новых",
+    },
+
+    MAINMENU: {
+      EVENTS: "Мои события",
+      INVOICES: "Счета",
+      MED_CARD: "Медицинская карта",
+      APPOINTMENT: "Запись на приём",
+      SIGNOUT: "Выход",
+      PROFILE: "Изменить персональные данные",
+    },
+    HOME: {
+      BRANCH1: "Что-то беспокоит?",
+      COLD: "Простуда",
+      SICKCHILD: "Заболел ребёнок",
+      HEADACHE: "Болит голова",
+      BRANCH2: "Записаться к специалисту",
+      BRANCH3: "Сейчас онлайн",
+      BRANCH4: "Ближайшие события",
+      BRANCH5: "Акции и промокоды",
+      START_CHAT: "Начать чат",
+      MAKE_APPOINTMENT: "Записаться на приём",
+    },
+    VISIT: {
+      ONLINE: "Онлайн",
+      FAVS: "Избранные",
+      FROM: "От",
+      CONSULT: "Консультация",
+      APPOINTMENTS: "Записи на прием",
+      ALERT_OK: "Вы записаны на приём",
+      CONFIRM_CANCEL: "Вы уверены что хотите отменить запись на приём?",
+    },
+    EVENTS_VISITS: {
+      FILTER_FUTURE: "Будущие визиты",
+      VISIT_CANCELED: "Запись на приём отменена",
+      TITLE_ONLINE_CONF: "Онлайн-консультация",
+      TITLE_VISIT_CANCELED: "Отмененный визит",
+      TITLE_VISIT: "Визит",
+    },
+    INVOICES: {
+      INVOICE_NO: "Счет №",
+      FILTER_UNPAID: "Не оплаченные",
+      FILTER_PAID: "Оплаченные",
+      FILTER_ALL: "Все",
+      QUANTITY: "Количество",
+      COST: "Стоимость услуг",
+      TO_PAY: "Oплатить",
+      BILL_PAYMENT: "Оплата счета",
+    },
+    MMK: {
+      APPOINTMENT: "Прием у врача",
+      RESULTS: "Результаты приёма",
+      NO_MMK_RECORDS: "Нет записей",
+    },
+    COMPONENT: {
+      DATAILS: "детали",
+
+      CLINICS: "Клиники",
+      SPECS: "Специалисты",
+      SPEC_OR_DOCNAME: "Специальность или ФИО",
+      APPOINTMENT_DATE: "Дата посещения",
+      BIRTH_DATE: "Дата рождения",
+      ARIA_DATE_LABEL: "Выбирете дату",
+
+      FORM_EMAIL: "Email",
+      FORM_PASS: "Пароль",
+      FORM_REPASS: "Повторите пароль",
+
+      FORM_NAME: "Имя",
+      FORM_LAST_NAME: "Фамилия",
+      FORM_MIDLE_NAME: "Отчество",
+      FORM_TEL: "Телефон",
+      FORM_GENDER: "Пол",
+      FORM_GENDER_M: "Мужской",
+      FORM_GENDER_F: "Женский",
+      BUTTON_SAVE: "Сохранить",
+      DATA_SAVED: "Данные сохранены",
+
+      FORM_VISIT_KIND: "Виды приема",
+      FORM_VISIT_KIND_PRICE: "Стоимость",
+      FORM_VISIT_KIND_DURATION: "Продолжительность",
+      BUT_MAKE_APPONTMENT: "Записаться на приём",
+      BUT_CLOSE: "Закрыть",
+      BUT_CONFIRM: "Да",
+      BUT_CANCEL: "Отменить",
+      BUT_UPDATE: "Обновить",
+
+      NOT_VALID_NAME: "Введите имя",
+      NOT_VALID_LAST_NAME: "Введите фамилию",
+      NOT_VALID_BIRTHDAY: "Введите дату рождения",
+      NOT_VALID_MMKID: "Пожалуйста выбирете имя",
+
+      BROWSER_NOT_SUUPORT_FRAMES:
+        "Ваш браузер не поддерживает встроенные фреймы!",
+    },
+    EMPTY_DATA: {
+      NO_SLOTS: "В данный момент слотов нет, выберите другую дату",
+      NO_DOCTORS: "Нет специалистов. Измените параметры запроса",
+      NO_DOCTORS_CURRENTLY: "В данный момент специалиалистов нет",
+      NO_EVENTS: "В данный момент нет событий",
+      NO_INVOICES: "В данный момент нет счетов",
+      NO_PROMO: "В данный момент нет акций",
+    },
+    BOTTOM: {
+      COPY: "© Пост Модерн Текнолоджи 2020г. Все права защищены.",
+    },
+  },
+};
