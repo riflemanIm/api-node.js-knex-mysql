@@ -25,7 +25,8 @@ router.get("/:id", async (req, res) => {
         .status(404)
         .json({ err: "The translation with the specified id does not exist" });
     } else {
-      res.status(200).json(translation[0]);
+      //console.log("\n\n\n -- translation --- \n\n\n", translation);
+      res.status(200).json(translation);
     }
   } catch (err) {
     res.status({ err: "The translation information could not be retrieved" });

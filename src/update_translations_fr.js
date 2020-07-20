@@ -1,19 +1,22 @@
-import en from "./translations/en.js";
+import fr from "./translations/fr.js";
 import db from "./config/dbConfig.js";
 
-const tryInsert = async (d) => {
+const tryUpdate = async (d) => {
   try {
-    const res = await db("translations").insert(d);
+    const res = await db("translations")
+      .where("gkey", d.gkey)
+      .where("tkey", d.tkey)
+      .update({ lang_fr: d.lang_fr });
     console.log("\n res:", res);
   } catch (e) {
     console.error("\n\n err", e);
   }
 };
 
-for (const [gkey, obj] of Object.entries(en.translations)) {
+for (const [gkey, obj] of Object.entries(fr.translations)) {
   //  console.log(`${gkey}: `);
   //console.log(Object.entries(value));
-  for (const [tkey, lang_en] of Object.entries(obj)) {
+  for (const [tkey, lang_fr] of Object.entries(obj)) {
     //console.log(`${gkey}:  ${tkey}:${tvalue}`);
     //console.log("\n");
     const dbDate = {
@@ -21,8 +24,8 @@ for (const [gkey, obj] of Object.entries(en.translations)) {
       pname: "mobimed_site",
       gkey,
       tkey,
-      lang_en,
+      lang_fr,
     };
-    tryInsert(dbDate);
+    tryUpdate(dbDate);
   }
 }
