@@ -28,7 +28,9 @@ const find = () => {
 const findById = (id) => {
   return db("translations").where("id", id).first();
 };
-
+const findByKeys = (gkey, tkey) => {
+  return db("translations").where("gkey", gkey).where("tkey", tkey).first();
+};
 // ADD A TRANSLATION
 const addTranslation = (translation) => {
   //const cdate = new Date().toISOString().slice(0, 19).replace("T", " ");
@@ -67,6 +69,7 @@ const removeTranslation = (id) => {
 module.exports = {
   find,
   findById,
+  findByKeys,
   addTranslation,
   updateTranslation,
   removeTranslation,

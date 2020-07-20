@@ -2,6 +2,8 @@ import express from "express";
 import translationsDB from "../models/translations-model";
 import { use } from "passport";
 import multer from "multer";
+import { extractFileName } from "../helpers/helpers";
+
 const upload = multer();
 const router = express.Router();
 
@@ -30,6 +32,72 @@ router.get("/:id", async (req, res) => {
     }
   } catch (err) {
     res.status({ err: "The translation information could not be retrieved" });
+  }
+});
+
+// IMORT JSON
+router.put("/import-file", upload.single("filedata"), async (req, res) => {
+  try {
+    if (!req.file) {
+      res.send({
+        status: false,
+        message: "No file uploaded",
+      });
+    } else {
+      //Use the name of the input field (i.e. "filename") to retrieve the uploaded file
+      const { buffer } = req.file;
+      const { filename, pname } = req.body;
+      const userId = req.params.id;
+      const translation = JSON.parse(buffer.toString("utf8"));
+
+      const lang = filename.split(".")[0];
+      console.log("\n ------- lang ------\n", lang, "\n\n");
+
+      for (const [gkey, obj] of Object.entries(translation)) {
+        //  console.log(`${gkey}: `);
+        //console.log(Object.entries(value));
+        for (const [tkey, lang_ru] of Object.entries(obj)) {
+          //console.log(`${gkey}:  ${tkey}:${tvalue}`);
+          //console.log("\n");
+          const data = {
+            account_id: 1,
+            pname,
+            gkey,
+            tkey,
+            lang_ru,
+          };
+          await translationsDB
+            .findByKeys(gkey, tkey)
+            .then(async (r) => {
+              if (r) {
+                const translation = await translationsDB.updateTranslation(
+                  r.id,
+                  data
+                );
+                console.log(
+                  "\n ------- translation update ------\n",
+                  translation
+                );
+              } else {
+                const translation = await translationsDB.addTranslation(data);
+                console.log(
+                  "\n ------- translation insert ------\n",
+                  translation
+                );
+              }
+            })
+            .catch((err) => {
+              console.log("\n ------- err update ------\n", err);
+            });
+        }
+      }
+
+      //send response
+      res.send({ status: "ok", filename });
+    }
+  } catch (err) {
+    console.log("\n ------- err ------\n", err);
+    res.status(500).json({ err: "Error uploading file " });
   }
 });
 

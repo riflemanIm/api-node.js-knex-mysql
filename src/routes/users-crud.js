@@ -102,27 +102,31 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.put("/upload-avatar/:id", upload.single("avatar"), async (req, res) => {
-  try {
-    if (!req.file) {
-      res.send({
-        status: false,
-        message: "No file uploaded",
-      });
-    } else {
-      //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
-      const { buffer } = req.file;
-      const { filename } = req.body;
-      const userId = req.params.id;
-      console.log("\n ------- saveUserAvatar ------\n");
-      await usersDB.saveUserAvatar(userId, buffer);
-      //send response
-      res.send({ status: "ok", filename });
+router.put(
+  "/upload-avatar/:id",
+  upload.single("filedata"),
+  async (req, res) => {
+    try {
+      if (!req.file) {
+        res.send({
+          status: false,
+          message: "No file uploaded",
+        });
+      } else {
+        //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
+        const { buffer } = req.file;
+        const { filename } = req.body;
+        const userId = req.params.id;
+        console.log("\n ------- saveUserAvatar ------\n");
+        await usersDB.saveUserAvatar(userId, buffer);
+        //send response
+        res.send({ status: "ok", filename });
+      }
+    } catch (err) {
+      res.status(500).json({ err: "Error uploading file " });
     }
-  } catch (err) {
-    res.status(500).json({ err: "Error uploading file " });
   }
-});
+);
 
 router.delete("/upload-avatar/:id", async (req, res) => {
   const userId = req.params.id;
