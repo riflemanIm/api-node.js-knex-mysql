@@ -2,7 +2,7 @@ import express from "express";
 import translationsDB from "../models/translations-model";
 import { use } from "passport";
 import multer from "multer";
-import { extractFileName } from "../helpers/helpers";
+import { defLangObj } from "../helpers/helpers";
 
 const upload = multer();
 const router = express.Router();
@@ -46,33 +46,34 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
     } else {
       //Use the name of the input field (i.e. "filename") to retrieve the uploaded file
       const { buffer } = req.file;
-      const { filename, pname } = req.body;
+      const { filename, pname, account_id, checked } = req.body;
       const userId = req.params.id;
       const translation = JSON.parse(buffer.toString("utf8"));
 
       const lang = filename.split(".")[0];
-      console.log("\n ------- lang ------\n", lang, "\n\n");
+      console.log("\n ------- lang ------\n", lang, pname, account_id, "\n\n");
 
       for (const [gkey, obj] of Object.entries(translation)) {
         //  console.log(`${gkey}: `);
         //console.log(Object.entries(value));
-        for (const [tkey, lang_ru] of Object.entries(obj)) {
+        for (const [tkey, lang_conent] of Object.entries(obj)) {
           //console.log(`${gkey}:  ${tkey}:${tvalue}`);
           //console.log("\n");
           const data = {
-            account_id: 1,
+            account_id,
             pname,
             gkey,
             tkey,
-            lang_ru,
+            ...defLangObj(lang, lang_conent, checked),
           };
           await translationsDB
-            .findByKeys(gkey, tkey)
+            .findByKeys(pname, gkey, tkey)
             .then(async (r) => {
               if (r) {
                 const translation = await translationsDB.updateTranslation(
                   r.id,
-                  data
+                  data,
+                  checked
                 );
                 console.log(
                   "\n ------- translation update ------\n",

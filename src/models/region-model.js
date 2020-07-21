@@ -13,7 +13,6 @@ const findById = (id) => {
 
 // ADD A REGION
 const addRegion = (region) => {
-  //const cdate = new Date().toISOString().slice(0, 19).replace("T", " ");
   return db("region_").insert(region);
 };
 

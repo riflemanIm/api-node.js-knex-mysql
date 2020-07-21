@@ -1,5 +1,6 @@
 //const db = require("../config/dbConfig.js");
 import db from "../config/dbConfig.js";
+import { localDateTime } from "../helpers/helpers";
 
 // GET USER PHOTO BY ID
 const photoById = (id) => {
@@ -70,7 +71,7 @@ const findById = (id) => {
 // ADD A USER
 const addUser = (user) => {
   //  return db("user").insert(user, "user_id");
-  const cdate = new Date().toISOString().slice(0, 19).replace("T", " ");
+  const cdate = localDateTime;
   return db.transaction(function (trx) {
     db("user")
       .transacting(trx)
@@ -78,7 +79,6 @@ const addUser = (user) => {
       .then(function (res) {
         const [user_id] = res;
 
-        //const cdate = new Date().toISOString().split("T")[0];
         console.log("--- user_id ---", user_id, "cdate", cdate);
         return db("emr_group")
           .insert({

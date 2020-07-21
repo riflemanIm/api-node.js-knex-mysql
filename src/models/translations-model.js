@@ -1,5 +1,5 @@
 import db from "../config/dbConfig.js";
-
+import { localDateTime } from "../helpers/helpers";
 // GET ALL TRANSLATIONS
 const find = () => {
   return db
@@ -28,35 +28,49 @@ const find = () => {
 const findById = (id) => {
   return db("translations").where("id", id).first();
 };
-const findByKeys = (gkey, tkey) => {
-  return db("translations").where("gkey", gkey).where("tkey", tkey).first();
+const findByKeys = (pname, gkey, tkey) => {
+  return db("translations")
+    .where("pname", pname)
+    .where("gkey", gkey)
+    .where("tkey", tkey)
+    .first();
 };
 // ADD A TRANSLATION
 const addTranslation = (translation) => {
-  //const cdate = new Date().toISOString().slice(0, 19).replace("T", " ");
   return db("translations").insert(translation);
 };
 
 // UPDATE TRANSLATION
-const updateTranslation = (id, post) => {
-  const updated_at = new Date().toISOString().slice(0, 19).replace("T", " ");
-  return db("translations")
-    .first()
-    .where("id", id)
-    .then((res) => {
-      const checked_en = post.lang_en !== res.lang_en;
-      const checked_ru = post.lang_ru !== res.lang_ru;
-      const checked_fr = post.lang_fr !== res.lang_fr;
-      return db("translations").where("id", id).update({
+const updateTranslation = (id, post, checked) => {
+  const updated_at = localDateTime;
+
+  return checked
+    ? db("translations").where("id", id).update({
         lang_en: post.lang_en,
         lang_ru: post.lang_ru,
         lang_fr: post.lang_fr,
-        checked_en,
-        checked_ru,
-        checked_fr,
+        checked_en: true,
+        checked_ru: true,
+        checked_fr: true,
         updated_at,
-      });
-    });
+      })
+    : db("translations")
+        .first()
+        .where("id", id)
+        .then((res) => {
+          const checked_en = post.lang_en !== res.lang_en;
+          const checked_ru = post.lang_ru !== res.lang_ru;
+          const checked_fr = post.lang_fr !== res.lang_fr;
+          return db("translations").where("id", id).update({
+            lang_en: post.lang_en,
+            lang_ru: post.lang_ru,
+            lang_fr: post.lang_fr,
+            checked_en,
+            checked_ru,
+            checked_fr,
+            updated_at,
+          });
+        });
 
   //return db("translations").where("id", id).update(post);
 };
