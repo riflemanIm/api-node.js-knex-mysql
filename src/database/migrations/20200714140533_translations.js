@@ -2,6 +2,8 @@ exports.up = function (knex) {
   return knex.schema
     .dropTableIfExists("translations")
     .createTable("translations", (table) => {
+      table.charset("utf8");
+      table.collate("utf8_general_ci");
       table.increments("id").unsigned().primary();
       table.integer("account_id").unsigned().notNullable().index();
 

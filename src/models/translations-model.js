@@ -41,14 +41,14 @@ const addTranslation = (translation) => {
 };
 
 // UPDATE TRANSLATION
-const updateTranslation = (id, post, checked) => {
+const updateTranslation = (id, data, checked, lang) => {
   const updated_at = localDateTime;
 
-  return checked
+  return checked === "true"
     ? db("translations").where("id", id).update({
-        lang_en: post.lang_en,
-        lang_ru: post.lang_ru,
-        lang_fr: post.lang_fr,
+        lang_en: data.lang_en,
+        lang_ru: data.lang_ru,
+        lang_fr: data.lang_fr,
         checked_en: true,
         checked_ru: true,
         checked_fr: true,
@@ -57,22 +57,30 @@ const updateTranslation = (id, post, checked) => {
     : db("translations")
         .first()
         .where("id", id)
-        .then((res) => {
-          const checked_en = post.lang_en !== res.lang_en;
-          const checked_ru = post.lang_ru !== res.lang_ru;
-          const checked_fr = post.lang_fr !== res.lang_fr;
-          return db("translations").where("id", id).update({
-            lang_en: post.lang_en,
-            lang_ru: post.lang_ru,
-            lang_fr: post.lang_fr,
-            checked_en,
-            checked_ru,
-            checked_fr,
-            updated_at,
-          });
+        .then((old) => {
+          if (lang === "ru") {
+            const checked_ru = data.lang_ru === old.lang_ru;
+
+            return db("translations")
+              .where("id", id)
+              .update({ ...data, checked_ru, updated_at });
+          }
+          if (lang === "en") {
+            const checked_en = data.lang_en === old.lang_en;
+            return db("translations")
+              .where("id", id)
+              .update({ ...data, checked_en, updated_at });
+          }
+          if (lang === "fr") {
+            const checked_fr = data.lang_fr === old.lang_fr;
+            console.log("checked_fr", checked_fr);
+            return db("translations")
+              .where("id", id)
+              .update({ ...data, checked_fr, updated_at });
+          }
         });
 
-  //return db("translations").where("id", id).update(post);
+  //return db("translations").where("id", id).update(data);
 };
 
 // REMOVE TRANSLATION

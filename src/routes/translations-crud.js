@@ -51,7 +51,14 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
       const translation = JSON.parse(buffer.toString("utf8"));
 
       const lang = filename.split(".")[0];
-      console.log("\n ------- lang ------\n", lang, pname, account_id, "\n\n");
+      console.log(
+        "\n ------- lang ------\n",
+        lang,
+        pname,
+        "checked",
+        checked,
+        "\n\n"
+      );
 
       for (const [gkey, obj] of Object.entries(translation)) {
         //  console.log(`${gkey}: `);
@@ -59,32 +66,34 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
         for (const [tkey, lang_conent] of Object.entries(obj)) {
           //console.log(`${gkey}:  ${tkey}:${tvalue}`);
           //console.log("\n");
-          const data = {
-            account_id,
-            pname,
-            gkey,
-            tkey,
-            ...defLangObj(lang, lang_conent, checked),
-          };
           await translationsDB
             .findByKeys(pname, gkey, tkey)
             .then(async (r) => {
               if (r) {
                 const translation = await translationsDB.updateTranslation(
                   r.id,
-                  data,
-                  checked
+                  defLangObj(lang, lang_conent, checked),
+                  checked,
+                  lang
                 );
-                console.log(
-                  "\n ------- translation update ------\n",
-                  translation
-                );
+                // console.log(
+                //   "\n ------- translation update ------\n",
+                //   translation
+                // );
               } else {
+                const data = {
+                  account_id,
+                  pname,
+                  gkey,
+                  tkey,
+                  ...defLangObj(lang, lang_conent, checked),
+                };
+
                 const translation = await translationsDB.addTranslation(data);
-                console.log(
-                  "\n ------- translation insert ------\n",
-                  translation
-                );
+                // console.log(
+                //   "\n ------- translation insert ------\n",
+                //   translation
+                // );
               }
             })
             .catch((err) => {
