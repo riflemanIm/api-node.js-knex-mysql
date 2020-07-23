@@ -35,10 +35,16 @@ router.get("/:id", async (req, res) => {
 });
 
 // GET TRANSLATION AS JSON
-router.get("/download/:lang", async (req, res) => {
+router.get("/download/:lang/:pname", async (req, res) => {
   const lang = req.params.lang;
+  const pname = req.params.pname;
+  const exKey = (key, val) => {
+    key.split(".").reduce((obj, item) => {
+      return { item: obj[item] };
+    }, {});
+  };
   try {
-    const translation = await translationsDB.findByLang(lang);
+    const translation = await translationsDB.findByLangPName(lang, pname);
     if (!translation) {
       res
         .status(404)
@@ -50,7 +56,9 @@ router.get("/download/:lang", async (req, res) => {
             ...obj,
             [item.gkey]: {
               ...obj[item.gkey],
-              [item.tkey]: item[`lang_${lang}`],
+              [item.tkey]: item.tkey.include(".")
+                ? { ...exKey(item.tkey) }
+                : item[`lang_${lang}`],
             },
           };
         }
@@ -93,45 +101,55 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
         checked,
         "\n\n"
       );
-      let parentTkey = "";
+      let parentTKeys = [];
       let oldLevel = 0;
       let level = 0;
       const transform = async (object, gkey) => {
         for (const [tkey, obj] of Object.entries(object)) {
           console.log("level:", level, "  oldLevel:", oldLevel);
-          if (oldLevel > level) parentTkey = "";
+          if (oldLevel > level) {
+            console.log("---------", "\n");
+            parentTKeys = parentTKeys.slice(0, level - 1);
+          }
+          console.log("parentTKeys", parentTKeys, parentTKeys.length);
           if (typeof obj === "object") {
             console.log("object");
-            parentTkey = tkey;
+            parentTKeys.push(tkey);
             level++;
             await transform(obj, gkey);
             level--;
           } else {
+            const fullTKey =
+              parentTKeys.length > 0 && typeof parentTKeys === "object"
+                ? `${parentTKeys.join(".")}.${tkey}`
+                : tkey;
             console.log(
               " gkey:",
               gkey,
               "\t",
-              "parentTkey:",
-              parentTkey,
+              "parentTKeys:",
+              parentTKeys,
               "\t",
               "tkey:",
-              tkey,
+              fullTKey,
               "\t",
               "lang_conent:",
               obj,
 
               "\n\n"
             );
+
             oldLevel = level;
-            // if (tkey !== "")
-            // translationsDB.saveTranslation(
-            //   gkey,
-            //   tkey,
-            //   pname,
-            //   lang_conent,
-            //   account_id,
-            //   checked,
-            //   lang
+            if (tkey !== "")
+              translationsDB.saveTranslation(
+                gkey,
+                fullTKey,
+                pname,
+                obj,
+                account_id,
+                checked,
+                lang
+              );
           }
         }
       };

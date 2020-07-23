@@ -37,10 +37,11 @@ const findByKeys = (pname, gkey, tkey) => {
     .where("tkey", tkey)
     .first();
 };
-const findByLang = (lang) => {
+const findByLangPName = (lang, pname) => {
   return db
     .select("gkey", "tkey", `lang_${lang}`)
     .from("translations")
+    .where("pname", pname)
     .orderBy([{ column: "gkey" }, { column: "tkey" }]);
 };
 // ADD A TRANSLATION
@@ -163,7 +164,7 @@ module.exports = {
   find,
   findById,
   findByKeys,
-  findByLang,
+  findByLangPName,
   addTranslation,
   updateTranslation,
   updateTranslationByJSON,
