@@ -18,3 +18,27 @@ export const localDateTime = new Date(Date.now() - tzoffset)
   .toISOString()
   .slice(0, 19)
   .replace("T", " ");
+
+function setDeep(obj, path, value) {
+  const arr = path.split(".");
+  //  console.log("value", value);
+  arr.reduce((acc, key, level) => {
+    if (typeof acc[key] === "undefined" && level !== arr.length) {
+      acc[key] = {};
+    }
+
+    if (level === arr.length - 1) {
+      acc[key] = value;
+      return value;
+    }
+    return acc[key];
+  }, obj);
+}
+
+export function tranformNoda(noda) {
+  const res = {};
+  for (const [fullKey, value] of Object.entries(noda)) {
+    setDeep(res, fullKey, value);
+  }
+  return res;
+}

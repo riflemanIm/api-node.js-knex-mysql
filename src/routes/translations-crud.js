@@ -2,7 +2,7 @@ import express from "express";
 import translationsDB from "../models/translations-model";
 import { use } from "passport";
 import multer from "multer";
-
+import { tranformNoda } from "../helpers/helpers";
 const upload = multer();
 const router = express.Router();
 
@@ -38,11 +38,6 @@ router.get("/:id", async (req, res) => {
 router.get("/download/:lang/:pname", async (req, res) => {
   const lang = req.params.lang;
   const pname = req.params.pname;
-  const exKey = (key, val) => {
-    key.split(".").reduce((obj, item) => {
-      return { item: obj[item] };
-    }, {});
-  };
   try {
     const translation = await translationsDB.findByLangPName(lang, pname);
     if (!translation) {
@@ -56,21 +51,31 @@ router.get("/download/:lang/:pname", async (req, res) => {
             ...obj,
             [item.gkey]: {
               ...obj[item.gkey],
-              [item.tkey]: item.tkey.include(".")
-                ? { ...exKey(item.tkey) }
-                : item[`lang_${lang}`],
+              [item.tkey]: item[`lang_${lang}`],
             },
           };
         }
         return { ...obj, [item.tkey]: item[`lang_${lang}`] };
       }, {});
-      // console.log("\n\n\n -- translation --- \n\n\n", translation);
+      //console.log("\n\n\n -- object --- \n\n\n", object);
+      const objectTrans = {};
+      Object.keys(object).forEach((gkey) => {
+        // console.log("object", gkey, object[gkey]);
+        if (typeof object[gkey] === "object") {
+          objectTrans[gkey] = tranformNoda(object[gkey]);
+        } else {
+          objectTrans[gkey] = object[gkey];
+        }
+
+        //return { ...key[0] };
+      }, {});
+
+      console.log("\n\n\n -- translation --- \n\n\n", objectTrans);
       res.writeHead(200, {
         "Content-Type": "application/json-my-attachment",
         "content-disposition": `attachment; filename="${lang}.json"`,
       });
-      res.end(JSON.stringify(object));
-      // res.status(200).json(object);
+      res.end(JSON.stringify(objectTrans));
     }
   } catch (err) {
     res.status({ err: "The translation information could not be retrieved" });
