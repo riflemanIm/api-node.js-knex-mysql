@@ -1,5 +1,7 @@
 import db from "../config/dbConfig.js";
 import { localDateTime } from "../helpers/helpers";
+import { defLangObj } from "../helpers/helpers";
+
 // GET ALL TRANSLATIONS
 const find = () => {
   return db
@@ -35,13 +37,19 @@ const findByKeys = (pname, gkey, tkey) => {
     .where("tkey", tkey)
     .first();
 };
+const findByLang = (lang) => {
+  return db
+    .select("gkey", "tkey", `lang_${lang}`)
+    .from("translations")
+    .orderBy([{ column: "gkey" }, { column: "tkey" }]);
+};
 // ADD A TRANSLATION
 const addTranslation = (translation) => {
   return db("translations").insert(translation);
 };
 
 // UPDATE TRANSLATION
-const updateTranslation = (id, data, checked, lang) => {
+const updateTranslationByJSON = (id, data, checked, lang) => {
   const updated_at = localDateTime;
 
   return checked === "true"
@@ -83,6 +91,69 @@ const updateTranslation = (id, data, checked, lang) => {
   //return db("translations").where("id", id).update(data);
 };
 
+// UPDATE TRANSLATION
+const updateTranslation = (id, post) => {
+  const updated_at = localDateTime;
+  return db("translations")
+    .first()
+    .where("id", id)
+    .then((res) => {
+      const checked_en = post.lang_en === res.lang_en;
+      const checked_ru = post.lang_ru === res.lang_ru;
+      const checked_fr = post.lang_fr === res.lang_fr;
+      return db("translations").where("id", id).update({
+        lang_en: post.lang_en,
+        lang_ru: post.lang_ru,
+        lang_fr: post.lang_fr,
+        checked_en,
+        checked_ru,
+        checked_fr,
+        updated_at,
+      });
+    });
+
+  //return db("translations").where("id", id).update(post);
+};
+
+const saveTranslation = (
+  gkey,
+  tkey,
+  pname,
+  lang_conent,
+  account_id,
+  checked,
+  lang
+) => {
+  return findByKeys(pname, gkey, tkey)
+    .then((r) => {
+      if (r) {
+        const translation = updateTranslationByJSON(
+          r.id,
+          defLangObj(lang, lang_conent, checked),
+          checked,
+          lang
+        );
+        //console.log("\n ------- translation update ------\n", translation);
+        return translation;
+      } else {
+        const data = {
+          account_id,
+          pname,
+          gkey,
+          tkey,
+          ...defLangObj(lang, lang_conent, checked),
+        };
+
+        const translation = addTranslation(data);
+        //console.log("\n ------- translation insert ------\n", translation);
+        return translation;
+      }
+    })
+    .catch((err) => {
+      console.log("\n ------- err update ------\n", err);
+    });
+};
+
 // REMOVE TRANSLATION
 const removeTranslation = (id) => {
   return db("translations").where("id", id).del();
@@ -92,7 +163,10 @@ module.exports = {
   find,
   findById,
   findByKeys,
+  findByLang,
   addTranslation,
   updateTranslation,
+  updateTranslationByJSON,
   removeTranslation,
+  saveTranslation,
 };

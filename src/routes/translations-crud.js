@@ -2,7 +2,6 @@ import express from "express";
 import translationsDB from "../models/translations-model";
 import { use } from "passport";
 import multer from "multer";
-import { defLangObj } from "../helpers/helpers";
 
 const upload = multer();
 const router = express.Router();
@@ -17,7 +16,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET USER BY ID
+// GET TRANSLATION BY ID
 router.get("/:id", async (req, res) => {
   const translationId = req.params.id;
   try {
@@ -29,6 +28,41 @@ router.get("/:id", async (req, res) => {
     } else {
       //console.log("\n\n\n -- translation --- \n\n\n", translation);
       res.status(200).json(translation);
+    }
+  } catch (err) {
+    res.status({ err: "The translation information could not be retrieved" });
+  }
+});
+
+// GET TRANSLATION AS JSON
+router.get("/download/:lang", async (req, res) => {
+  const lang = req.params.lang;
+  try {
+    const translation = await translationsDB.findByLang(lang);
+    if (!translation) {
+      res
+        .status(404)
+        .json({ err: "The translation with the specified id does not exist" });
+    } else {
+      const object = translation.reduce((obj, item) => {
+        if (item.gkey !== "") {
+          return {
+            ...obj,
+            [item.gkey]: {
+              ...obj[item.gkey],
+              [item.tkey]: item[`lang_${lang}`],
+            },
+          };
+        }
+        return { ...obj, [item.tkey]: item[`lang_${lang}`] };
+      }, {});
+      // console.log("\n\n\n -- translation --- \n\n\n", translation);
+      res.writeHead(200, {
+        "Content-Type": "application/json-my-attachment",
+        "content-disposition": `attachment; filename="${lang}.json"`,
+      });
+      res.end(JSON.stringify(object));
+      // res.status(200).json(object);
     }
   } catch (err) {
     res.status({ err: "The translation information could not be retrieved" });
@@ -47,7 +81,7 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
       //Use the name of the input field (i.e. "filename") to retrieve the uploaded file
       const { buffer } = req.file;
       const { filename, pname, account_id, checked } = req.body;
-      const userId = req.params.id;
+      const translationId = req.params.id;
       const translation = JSON.parse(buffer.toString("utf8"));
 
       const lang = filename.split(".")[0];
@@ -59,49 +93,60 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
         checked,
         "\n\n"
       );
+      let parentTkey = "";
+      let oldLevel = 0;
+      let level = 0;
+      const transform = async (object, gkey) => {
+        for (const [tkey, obj] of Object.entries(object)) {
+          console.log("level:", level, "  oldLevel:", oldLevel);
+          if (oldLevel > level) parentTkey = "";
+          if (typeof obj === "object") {
+            console.log("object");
+            parentTkey = tkey;
+            level++;
+            await transform(obj, gkey);
+            level--;
+          } else {
+            console.log(
+              " gkey:",
+              gkey,
+              "\t",
+              "parentTkey:",
+              parentTkey,
+              "\t",
+              "tkey:",
+              tkey,
+              "\t",
+              "lang_conent:",
+              obj,
 
-      for (const [gkey, obj] of Object.entries(translation)) {
-        //  console.log(`${gkey}: `);
-        //console.log(Object.entries(value));
-        for (const [tkey, lang_conent] of Object.entries(obj)) {
-          //console.log(`${gkey}:  ${tkey}:${tvalue}`);
-          //console.log("\n");
-          await translationsDB
-            .findByKeys(pname, gkey, tkey)
-            .then(async (r) => {
-              if (r) {
-                const translation = await translationsDB.updateTranslation(
-                  r.id,
-                  defLangObj(lang, lang_conent, checked),
-                  checked,
-                  lang
-                );
-                // console.log(
-                //   "\n ------- translation update ------\n",
-                //   translation
-                // );
-              } else {
-                const data = {
-                  account_id,
-                  pname,
-                  gkey,
-                  tkey,
-                  ...defLangObj(lang, lang_conent, checked),
-                };
+              "\n\n"
+            );
+            oldLevel = level;
+            // if (tkey !== "")
+            // translationsDB.saveTranslation(
+            //   gkey,
+            //   tkey,
+            //   pname,
+            //   lang_conent,
+            //   account_id,
+            //   checked,
+            //   lang
+          }
+        }
+      };
 
-                const translation = await translationsDB.addTranslation(data);
-                // console.log(
-                //   "\n ------- translation insert ------\n",
-                //   translation
-                // );
-              }
-            })
-            .catch((err) => {
-              console.log("\n ------- err update ------\n", err);
-            });
+      for (const [gkey, object] of Object.entries(translation)) {
+        if (typeof object === "string") {
+          level = 0;
+          const fobj = {};
+          fobj[`${gkey}`] = object;
+          await transform(fobj, "");
+        } else {
+          level++;
+          await transform(object, gkey);
         }
       }
-
       //send response
       res.send({ status: "ok", filename });
     }
@@ -111,7 +156,7 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
   }
 });
 
-// INSERT USER INTO DB
+// INSERT TRANSLATION INTO DB
 router.post("/", async (req, res) => {
   const newTranslation = req.body.data;
   console.log("newTranslation", newTranslation);

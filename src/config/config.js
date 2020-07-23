@@ -12,9 +12,9 @@ const config = {
   port: process.env.NODE_ENV === "production" ? "" : process.env.PORT || 8000,
   hostUI:
     process.env.NODE_ENV === "production"
-      ? "https://demo.site.com"
+      ? "http://192.168.0.12"
       : "http://localhost",
-  portUI: process.env.NODE_ENV === "production" ? "" : "3000",
+  portUI: process.env.NODE_ENV === "production" ? "5000" : "3000",
   google: {
     clientId:
       "592707349093-3ab6a0seutt1qpiiq8u0k3in5k7f226d.apps.googleusercontent.com",
