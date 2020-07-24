@@ -70,7 +70,7 @@ router.get("/download/:lang/:pname", async (req, res) => {
         //return { ...key[0] };
       }, {});
 
-      console.log("\n\n\n -- translation --- \n\n\n", objectTrans);
+      //console.log("\n\n\n -- translation --- \n\n\n", objectTrans);
       res.writeHead(200, {
         "Content-Type": "application/json-my-attachment",
         "content-disposition": `attachment; filename="${lang}.json"`,
@@ -112,10 +112,7 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
       const transform = async (object, gkey) => {
         for (const [tkey, obj] of Object.entries(object)) {
           console.log("level:", level, "  oldLevel:", oldLevel);
-          if (oldLevel > level) {
-            console.log("---------", "\n");
-            parentTKeys = parentTKeys.slice(0, level - 1);
-          }
+
           console.log("parentTKeys", parentTKeys, parentTKeys.length);
           if (typeof obj === "object") {
             console.log("object");
@@ -123,6 +120,7 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
             level++;
             await transform(obj, gkey);
             level--;
+            parentTKeys = parentTKeys.slice(0, level - 1);
           } else {
             const fullTKey =
               parentTKeys.length > 0 && typeof parentTKeys === "object"
@@ -144,7 +142,6 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
               "\n\n"
             );
 
-            oldLevel = level;
             if (tkey !== "")
               translationsDB.saveTranslation(
                 gkey,
@@ -156,10 +153,12 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
                 lang
               );
           }
+          oldLevel = level;
         }
       };
 
       for (const [gkey, object] of Object.entries(translation)) {
+        parentTKeys = [];
         if (typeof object === "string") {
           level = 0;
           const fobj = {};
@@ -175,7 +174,9 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
     }
   } catch (err) {
     console.log("\n ------- err ------\n", err);
-    res.status(500).json({ err: "Error uploading file " });
+    res
+      .status(500)
+      .json({ err: "Error uploading file ", message: err.message });
   }
 });
 
