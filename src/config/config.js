@@ -9,10 +9,10 @@ const config = {
   admin_email: "oleg@la.com",
   secret_key: "HUEyqESqgQ1yTwzVlO6wprC9Kf1J1xuA",
   remote: "https://site-node-backend.herokuapp.com",
-  port: process.env.NODE_ENV === "production" ? "" : process.env.PORT || 8000,
+  port: process.env.NODE_ENV === "production" ? 8080 : 8000,
   hostUI:
     process.env.NODE_ENV === "production"
-      ? "http://192.168.0.12"
+      ? "http://10.1.0.182"
       : "http://localhost",
   portUI: process.env.NODE_ENV === "production" ? "5000" : "3000",
   google: {
@@ -25,6 +25,8 @@ const config = {
     clientSecret: "K1?+9TM5?9-UN+pbMIx-PZQn3dKQysIM",
   },
 };
+
+console.log("process.env.NODE_ENV", process.env.NODE_ENV);
 
 config.host =
   process.env.NODE_ENV === "production" ? config.remote : "http://localhost";

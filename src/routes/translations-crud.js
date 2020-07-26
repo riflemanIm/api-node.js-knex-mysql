@@ -192,6 +192,17 @@ router.post("/", async (req, res) => {
     res.status(500).json({ err: "Error in adding translation" });
   }
 });
+router.put("/checked", async (req, res) => {
+  const post = req.body.data;
+
+  try {
+    const checkeds = await translationsDB.updateChecked(post);
+    console.log("\n checkeds \n", checkeds);
+    res.status(200).json(checkeds);
+  } catch (err) {
+    res.status(500).json({ err: err.message });
+  }
+});
 
 router.put("/:id", async (req, res) => {
   const translationId = req.params.id;
@@ -202,10 +213,10 @@ router.put("/:id", async (req, res) => {
       translationId,
       newChanges
     );
-    console.log("\n addChanges\n", translationId, addChanges);
+    console.log("\n addChangesdddd \n", translationId, addChanges);
     res.status(200).json(addChanges);
   } catch (err) {
-    res.status(500).json({ err: "Error in updating translation" });
+    res.status(500).json({ err: err.message });
   }
 });
 

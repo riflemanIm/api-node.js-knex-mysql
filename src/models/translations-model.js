@@ -58,7 +58,7 @@ const updateTranslationByJSON = (id, data, checked, lang) => {
         lang_en: data.lang_en,
         lang_ru: data.lang_ru,
         lang_fr: data.lang_fr,
-        checked_en: true,
+        checked_en,
         checked_ru: true,
         checked_fr: true,
         updated_at,
@@ -92,26 +92,54 @@ const updateTranslationByJSON = (id, data, checked, lang) => {
   //return db("translations").where("id", id).update(data);
 };
 
+// UPDATE CHECKEDS
+const updateChecked = (post) => {
+  const updated_at = localDateTime;
+  const { selected, checked_en, checked_ru, checked_fr } = post;
+  console.log("ids \n\n ", selected);
+
+  return db("translations").whereIn("id", selected).update({
+    updated_at,
+    checked_en,
+    checked_ru,
+    checked_fr,
+  });
+};
+
 // UPDATE TRANSLATION
 const updateTranslation = (id, post) => {
   const updated_at = localDateTime;
+
   return db("translations")
-    .first()
     .where("id", id)
-    .then((res) => {
-      const checked_en = post.lang_en === res.lang_en;
-      const checked_ru = post.lang_ru === res.lang_ru;
-      const checked_fr = post.lang_fr === res.lang_fr;
-      return db("translations").where("id", id).update({
-        lang_en: post.lang_en,
-        lang_ru: post.lang_ru,
-        lang_fr: post.lang_fr,
-        checked_en,
-        checked_ru,
-        checked_fr,
-        updated_at,
-      });
+    .update({
+      ...post,
+      updated_at,
     });
+
+  // COMPARE WITH OLD VALUE
+  // return db("translations")
+  //   .first()
+  //   .where("id", id)
+  //   .then((res) => {
+  //     const checked_en = post.checked;
+  //     const checked_ru = post.checked;
+  //     const checked_fr = post.checked;
+
+  //     const checked_en = post.checked || post.lang_en === res.lang_en;
+  //     const checked_ru = post.checked || post.lang_ru === res.lang_ru;
+  //     const checked_fr = post.checked || post.lang_fr === res.lang_fr;
+
+  //     return db("translations").where("id", id).update({
+  //       lang_en: post.lang_en,
+  //       lang_ru: post.lang_ru,
+  //       lang_fr: post.lang_fr,
+  //       checked_en,
+  //       checked_ru,
+  //       checked_fr,
+  //       updated_at,
+  //     });
+  //   });
 
   //return db("translations").where("id", id).update(post);
 };
@@ -167,6 +195,7 @@ module.exports = {
   findByLangPName,
   addTranslation,
   updateTranslation,
+  updateChecked,
   updateTranslationByJSON,
   removeTranslation,
   saveTranslation,

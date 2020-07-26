@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"5@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/5/-/5-0.0.1.tgz#8a4a56ba3cf511ae117a9d0f95cfcef8e100a31c"
-
 "@babel/cli@^7.10.3":
   version "7.10.3"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.10.3.tgz#4ea83bd997d2a41c78d07263ada3ec466fb3764b"
