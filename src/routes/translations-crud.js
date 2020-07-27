@@ -181,28 +181,28 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
 });
 
 // INSERT TRANSLATION INTO DB
-router.post("/", async (req, res) => {
-  const newTranslation = req.body.data;
-  console.log("newTranslation", newTranslation);
-  try {
-    translation = await translationsDB.addTranslation(newTranslation);
-    console.log("\n\n\n addTranslation '" + translation + "' \n\n\n");
-    res.status(201).json(translation);
-  } catch (err) {
-    res.status(500).json({ err: "Error in adding translation" });
-  }
-});
-router.put("/checked", async (req, res) => {
-  const post = req.body.data;
+// router.post("/", async (req, res) => {
+//   const newTranslation = req.body.data;
+//   console.log("newTranslation", newTranslation);
+//   try {
+//     translation = await translationsDB.addTranslation(newTranslation);
+//     console.log("\n\n\n addTranslation '" + translation + "' \n\n\n");
+//     res.status(201).json(translation);
+//   } catch (err) {
+//     res.status(500).json({ err: "Error in adding translation" });
+//   }
+// });
+// router.put("/checked", async (req, res) => {
+//   const post = req.body.data;
 
-  try {
-    const checkeds = await translationsDB.updateChecked(post);
-    console.log("\n checkeds \n", checkeds);
-    res.status(200).json(checkeds);
-  } catch (err) {
-    res.status(500).json({ err: err.message });
-  }
-});
+//   try {
+//     const checkeds = await translationsDB.updateChecked(post);
+//     console.log("\n checkeds \n", checkeds);
+//     res.status(200).json(checkeds);
+//   } catch (err) {
+//     res.status(500).json({ err: err.message });
+//   }
+// });
 
 router.put("/:id", async (req, res) => {
   const translationId = req.params.id;
