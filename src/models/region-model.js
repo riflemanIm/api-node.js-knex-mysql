@@ -18,12 +18,7 @@ const addRegion = (region) => {
 
 // UPDATE REGION
 const updateRegion = (id, post) => {
-  const regionPost = {
-    title: post.title,
-    sort: post.sort,
-  };
-  console.log("\n---------------\n regionPost", regionPost);
-  return db("region_").where("region_id", id).update(regionPost);
+  return db("region_").where("region_id", id).update(post);
 };
 
 // REMOVE REGION

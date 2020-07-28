@@ -35,13 +35,15 @@ router.get("/:id", async (req, res) => {
 // INSERT USER INTO DB
 router.post("/", async (req, res) => {
   const newRegion = req.body.data;
-  console.log("newRegion", newRegion);
+
   try {
-    region = await regionsDB.addRegion(newRegion);
-    console.log("\n\n\n addRegion '" + region + "' \n\n\n");
-    res.status(201).json(region);
+    await regionsDB.addRegion(newRegion);
+    res.status(201).json("ok");
   } catch (err) {
-    res.status(500).json({ err: "Error in adding region" });
+    console.log("err", err);
+    res
+      .status(500)
+      .json({ err: "Error in adding region", message: err.message });
   }
 });
 
@@ -54,7 +56,9 @@ router.put("/:id", async (req, res) => {
     console.log("\n addChanges\n", regionId, addChanges);
     res.status(200).json(addChanges);
   } catch (err) {
-    res.status(500).json({ err: "Error in updating region" });
+    res
+      .status(500)
+      .json({ err: "Error in updating region", message: err.message });
   }
 });
 
@@ -65,7 +69,9 @@ router.delete("/:id", async (req, res) => {
     console.log("deleting \n", deleting);
     res.status(204).json(deleting);
   } catch (err) {
-    res.status(500).json({ err: "Error in deleting region" });
+    res
+      .status(500)
+      .json({ err: "Error in deleting region", message: err.message });
   }
 });
 
