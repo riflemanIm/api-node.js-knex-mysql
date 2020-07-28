@@ -192,17 +192,18 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
 //     res.status(500).json({ err: "Error in adding translation" });
 //   }
 // });
-// router.put("/checked", async (req, res) => {
-//   const post = req.body.data;
 
-//   try {
-//     const checkeds = await translationsDB.updateChecked(post);
-//     console.log("\n checkeds \n", checkeds);
-//     res.status(200).json(checkeds);
-//   } catch (err) {
-//     res.status(500).json({ err: err.message });
-//   }
-// });
+router.put("/checked", async (req, res) => {
+  const post = req.body.data;
+
+  try {
+    const checkeds = await translationsDB.updateChecked(post);
+    console.log("\n checkeds \n", checkeds);
+    res.status(200).json(checkeds);
+  } catch (err) {
+    res.status(500).json({ err: err.message });
+  }
+});
 
 router.put("/:id", async (req, res) => {
   const translationId = req.params.id;
