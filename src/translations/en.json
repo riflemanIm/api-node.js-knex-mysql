@@ -1,0 +1,608 @@
+{
+  "Adres": "Address",
+  "Aktsyy": "Special offers",
+  "Aktsyya": "Special offer",
+  "Allergologist-immunologist": "Allergologist-immunologist",
+  "Anonymno": "Anonymously",
+  "Anonymnye": "Anonymous",
+  "Avtoryzatsyya-cherez-Hosusluhy": "Authorization through Public Services",
+  "Blyzhayshye-sobytyya": "Upcoming events",
+  "Budushchye": "Future",
+  "Bystrye-reshenyya": "Quick solutions",
+  "Bystryy-dostup": "Quick access",
+  "CHastozadavaemye-voprosy": "FAQ",
+  "Da": "Yes",
+  "Dannaya-usluha-vkhodyt-v-sostav-prohrammy-hodovoho": "This service is part of the annual subscription program. It can also be provided through individual, family and corporate service subscriptions, optimizing your costs for medical services.",
+  "Data-konsul-tatsyy": "Consultation date",
+  "Demo-vkhod": "Demo Login",
+  "Dety": "Children",
+  "Dobro-pozhalovat": "Welcome!",
+  "Dokument": "Document",
+  "Dokumenty": "Documents",
+  "E-mail": "E-mail",
+  "E-mail-ne-podtverzhden": "E-mail not verified!",
+  "E-mail-yly-lohyn": "E-mail or login",
+  "Ear-nose-throat-specialist": "Ear Nose Throat Specialist",
+  "Esly-u-Vas-net-rehystratsyy-na-Hosusluhakh-ESYA-yl": "If you are not registered at Public Services or if your account is not valid, you'll need to get registered or confirm your account at the site",
+  "FirstName": "Name",
+  "Foto-klynyky": "Clinic photo",
+  "General-specialist": "General Specialist",
+  "Gynecologist": "Gynecologist",
+  "Hde-prynymaet": "Consultation place",
+  "Heart-specialist": "Heart specialist",
+  "Immune-system-specialist": "Immune system specialist",
+  "KHranyte-vse-dannye-o-zdorov-e": "Keep all health data of",
+  "Kod-podtverzhdenyya": "Confirmation code",
+  "Kod-podtverzhdenyya-prosrochen": "Confirmation code expired!",
+  "Konsul-tatsyya-otmenena": "Consultation canceled!",
+  "Kontakty": "Contacts",
+  "LastName": "Surname",
+  "MiddleName": "Patronymic",
+  "Mobyl-naya": "Mobile",
+  "Na-hlavnuyu": "To the main",
+  "Na-karte": "On the map",
+  "Napomynanyya": "Reminders",
+  "Napravlenye-k-travmatolohu": "Referral to traumatologist",
+  "Napravlenye-na-renthen": "X-ray referral",
+  "Napravlenyya": "Referrals",
+  "Nastroyka-uvedomlenyy": "Set up notifications",
+  "Ne-anonymnye": "Not anonymous",
+  "Ne-seychas": "Not now",
+  "Ne-udalos-yspol-zovat-Touch-Id-dlya-vkhoda-v-prylo": "Failed to use Touch Id to enter the application.",
+  "Nervous-system-specialist": "Nervous system specialist",
+  "Net-svobodnykh-zapysey": "No free time",
+  "Neurologist": "Neurologist",
+  "Nevernyy-e-mail": "Invalid E-mail",
+  "Nevernyy-kod-podtverzhdenyya": "Invalid confirmation code",
+  "Nevernyy-lohyn-yly-parol": "Incorrect login or password!",
+  "Nevernyy-parol": "Incorrect password!",
+  "O-klynyke": "About the clinic",
+  "O-prylozhenyy": "About app",
+  "O-vrache": "About the doctor",
+  "OK": "OK",
+  "Obrazovanye": "Education",
+  "Onlayn": "Online",
+  "Optional": "not obligatory",
+  "Ostav-te-svoy-otzyv": "Leave your feedback",
+  "Ostavyt-otzyv": "Leave feedback",
+  "Otmenyt-zapys": "Cancel appointment",
+  "Otorhinolaringologist": "ENT",
+  "Otsenky": "Marks",
+  "Otzyvy-o-klynyke": "Clinic feedback",
+  "Otzyvy-o-vrache": "Doctor feedback",
+  "PIN-kod": "PIN-code",
+  "Password": "Password",
+  "Patsyent": "Patient",
+  "Pediatrician": "Pediatrician",
+  "Pereyty-v-profyl": "Go to profile",
+  "Pervychnyy-pryem": "Primary consultation",
+  "Phone": "Telephone",
+  "Pin-kod-y-Touch-ID": "Pin Code and Touch ID",
+  "Podrobnee-ob-usluhe": "More about the service",
+  "Podrobnye-uslovyya": "Detailed terms",
+  "Podtverdyte-dannye": "Confirm data",
+  "Podtverdyte-parol": "Confirm password",
+  "Pol-zovatel-skoe-sohlashenye": "Terms of use",
+  "Poluchayte-konsul-tatsyy": "Get instant consultations",
+  "Poluchayte-napomynanyya": "Get reminders",
+  "Ponyatno": "Close",
+  "Posmotryte-raspysanye-na": "See schedule for",
+  "Povtornyy-pryem": "Repeated consultation",
+  "Povtoryte": "Repeat",
+  "Poysk-troetochie": "Search...",
+  "Promokod-uspeshno": "Promo code applied",
+  "Promokody": "Promotional Codes",
+  "Propustyt": "Skip",
+  "Prosto-vyberyte-neobkhodymoho": "Just select the doctor you need",
+  "Prylozhyte-palets-chtoby-voyty-v-prylozhenye": "Put your finger to enter the application.",
+  "Prymenyt": "Apply",
+  "Prynyat-sohlashenye": "Accept agreement",
+  "Pys-mo-s-kodom-podtverzhdenyya-otpravleno-na": "A e-mail confirmation has been sent to",
+  "Sbrosyt": "Reset",
+  "Sbrosyt-vse": "Reset all",
+  "Sehodnya": "Today",
+  "Set": "Set a",
+  "Snachala-novye": "New first",
+  "Snachala-otrytsatel-nye": "Negative first",
+  "Snachala-polozhytel-nye": "Positive first",
+  "Sortyrovat-rezul-taty": "Sort results",
+  "Spasybo-za-otzyv": "Thanks for the feedback!",
+  "Specialist-for-children": "Specialist for children",
+  "Spetsyalysty": "Specialists",
+  "Spetsyalyzatsyya": "Specialization",
+  "Spysok-uvedomlenyy": "Notifications",
+  "Surgeon": "Surgeon",
+  "Surgical-treatment": "Surgical treatment",
+  "Takoy-E-mail-uzhe-byl-zarehystryrovan": "This e-mail has already been registered!",
+  "Tekhnycheskaya-podderzhka": "Technical support",
+  "Tekst-otzyva": "Feedback text",
+  "Therapist": "General physician",
+  "Traumatologist": "Traumatologist",
+  "Treatment-of-injuries-and-post-injury-syndromes": "Treatment of injuries and post injury syndromes",
+  "Typ-pryema": "Consultation type",
+  "Typ-zapysy": "Appointment type",
+  "Upravlyayte-semeynoy": "Keep your familiy",
+  "V-klynyke": "In the clinic",
+  "Vkhod": "Sign In",
+  "Vklyuchyt-uvedomlenyya": "Enable notifications",
+  "Vklyuchyte-uvedomlenyya-y-my": "Turn on notifications and we'll",
+  "Voyty": "Sign In",
+  "Voyty-cherez-Hosusluhy": "Log in through Public Services",
+  "Vrach": "Doctor",
+  "Vse": "All",
+  "Vse-aktsyy": "All special offers",
+  "Vvedyte": "Enter",
+  "Vvedyte-e-mail-yly-lohyn": "Enter e-mail or login",
+  "Vvedyte-kod-podtverzhdenyya": "Enter confirmation code",
+  "Vvedyte-parol": "Enter password",
+  "Vy-deystvytel-no-khotyte-otmenyt-zapys": "Are you sure to cancel appointment?",
+  "Vyberyte": "Select",
+  "Vyberyte-datu-y-vracha": "Select date and doctor",
+  "Vyberyte-klynyku": "Select clinic",
+  "Vyberyte-spetsyalyzatsyyu": "Select specialization",
+  "Vybrat-klynyku": "Select clinic",
+  "Vyslat-kod-eshche-raz": "Send code again",
+  "Vyyty": "Sign Out",
+  "Vzroslye": "Adults",
+  "Women-health": "Women health",
+  "Ynfo": "Info",
+  "Ynformatsyya-o-sobytyy": "Event information",
+  "Yspol-zovat-Touch-ID-dlya": "Use Touch ID to",
+  "Zabotyt-sya-o-svoem-zdorov-e-stalo-proshche-Uznayt": "Taking care of your health has become easier! Learn more how to do this.",
+  "Zadavayte-lyubye-ynteresuyushchye": "Ask any questions",
+  "Zaholovok-otzyva": "Feedback title",
+  "Zapys-na-pryem": "Appointment",
+  "Zapysat-sya": "Make appointment",
+  "Zapysat-sya-na-konsul-tatsyyu": "Make appointment",
+  "Zapysy-na-pryem": "Appointments",
+  "Zapysyvaytes-k-vrachu": "Make appointment",
+  "Zarehystryrovat-sya": "Sign Up",
+  "Zavershennye": "Completed",
+  "bez-avtoryzatsyy": "without authorization",
+  "bez-ocheredey": "without queues",
+  "birthDate": "Birth date",
+  "blyzhayshye-dny": "coming days",
+  "cabinet": "Room",
+  "cancel": "Cancel",
+  "cherez-prylozhenye": "with application",
+  "clinic": "Clinic",
+  "consultationType": "Consultation type",
+  "diplomasAndCertificates": "Diplomas and certificates",
+  "doctorSpecialization": "Doctor's specialization",
+  "dokument-MobiApp": "MobiApp document",
+  "dostupno-v-polnoy-versyy": "available in full version",
+  "error": "Error",
+  "experience": "experience",
+  "gender": "Sex",
+  "k-medytsynskym-usluham": "to medical services",
+  "konkretnoho-vracha": "specific doctor",
+  "medkartoy": "medical record",
+  "medytsynskaya-karta": "medical record",
+  "more": "more",
+  "next": "Next",
+  "notifications": "Notifications",
+  "nuzhnuyu-klynyku": "specific clinic",
+  "nykakykh-bumah": "no papers!",
+  "o-klynyke": "about clinic",
+  "o-predstoyashchykh-sobytyyakh": "about upcoming events",
+  "o-vrache": "about the doctor",
+  "online": "Online",
+  "opovestym-Vas-o-blyzhayshykh-sobytyyakh": "notify you of upcoming events",
+  "otsenok": "grades",
+  "po-rasstoyanyyu": "by distance",
+  "po-reytynhu": "by rating",
+  "priceFrom": "of",
+  "proceed": "Continue",
+  "prymenen": "successfully!",
+  "qrCodeLabel": "Bring the phone to the terminal, the screen to the reader",
+  "ready": "Ready",
+  "reviews": "Reviews",
+  "save": "Сохранить",
+  "sehodnya": "today",
+  "spetsyalysta-y-zapyshytes-na-pryem": "and make appointment",
+  "spetsyalystov-mhnovenno": "of professionals",
+  "spetsyalyzatsyyu-vracha": "doctor's specialization",
+  "v-Vashem-kalendare": "on your calendar",
+  "vas-voprosy-kvalyfytsyrovannym": "to any specialists",
+  "vashey-sem-y-v-odnom-prylozhenyy": "your family in one application,",
+  "vchera": "yesterday",
+  "vkhoda-v-prylozhenye": "login to the app?",
+  "vracham-v-udobnoe-vremya-sutok": "24 hours per day",
+  "yly-v-lyubom-TSentre-obsluzhyvanyya-pol-zovateley": "or any Service Center",
+  "zapys": "entry",
+  "zapysey": "entries",
+  "zapysy": "entries",
+  "zavtra": "tomorrow",
+  "Cardiologist": "Cardiologist",
+  "pinAndTouchId": {
+    "pinCode": "Pin-код",
+    "loginByPin": "Вход по pin-коду",
+    "changePin": "Именить pin-код",
+    "setPin": "Установить pin-код",
+    "disablePin": "Отключить pin-код",
+    "loginBy": "Вход по ",
+    "ebableLoginBy": "Разрешить вход по ",
+    "pinChanged": "Pin-код успешно изменён",
+    "pinDisabled": "Pin-код отключен"
+  },
+  "touchId": "Touch ID",
+  "faceId": "Face ID",
+  "pin": {
+    "enterPin": "Введите pin-код",
+    "enterCurrentPin": "Введите текущий pin-код",
+    "createPin": "Придумайте pin-код",
+    "repeatPin": "Повторите pin-код"
+  },
+  "common": {
+    "success": "Успешно"
+  },
+  "AboutApp": {
+    "appVersion": "Version: {{appVersion}}"
+  },
+  "ChangePassword": {
+    "confirmNewPassword": "Confirm new password",
+    "newPassword": "New password",
+    "success": {
+      "message": "You have changed the password",
+      "title": "Successfully"
+    },
+    "title": "Change password"
+  },
+  "ChangePasswordConfirm": {
+    "errors": {
+      "confirmationCodeExpired": "Confirmation code expired. A new code was sent to you",
+      "wrongConfirmationCode": "Invalid confirmation code"
+    },
+    "newCodeSent": "The code was sent to your e-mail",
+    "title": "Confirm the change of password"
+  },
+  "ChangePin": {
+    "success": {
+      "message": "You have changed the pin-code",
+      "title": "Successfully"
+    },
+    "title": "Change pin-code"
+  },
+  "Chat": {
+    "accessToCameraDenied": {
+      "close": "Close",
+      "message": "Open Settings to grant access",
+      "settings": "Settings",
+      "title": "Access to camera denied"
+    },
+    "accessToGalleryDenied": {
+      "close": "Close",
+      "message": "Open Settings to grant access",
+      "settings": "Settings",
+      "title": "Access to gallery denied"
+    },
+    "addAttachment": {
+      "cancel": "Cancel",
+      "takePhoto": "Take photo",
+      "uploadDocument": "Upload document",
+      "uploadMedia": "Upload photo/video",
+      "uploadPhoto": "Upload photo"
+    },
+    "messagesPlaceholder": "No messages yet.",
+    "placeholder": "Message...",
+    "routeName": "Chat with doctor",
+    "serviceMessage": "Service message"
+  },
+  "ConfirmVisit": {
+    "consultationPrice": "Consultation price",
+    "consultationType": {
+      "offline": "Consultation in clinics",
+      "online": "Online",
+      "title": "Consultation type",
+      "total": "Total"
+    }
+  },
+  "ConfirmationCode": {
+    "codeCanBeSendOnlyAfterXSecs": {
+      "few": "A new code can only be sent in {{count}} seconds",
+      "many": "A new code can only be sent in {{count}} seconds",
+      "one": "A new code can only be sent in {{count}} second",
+      "other": "A new code can only be sent in {{count}} seconds"
+    }
+  },
+  "DeleteUserAccount": {
+    "confirm": "Confirm account deletion",
+    "errors": {
+      "mmkAlreadyExists": "The account cannot be deleted as the Mobile Health Record has already been created"
+    },
+    "success": "Account deleted"
+  },
+  "MMK": {
+    "noRecords": "No records"
+  },
+  "MyConsultations": {
+    "emptyLastMessage": "Пока нет сообщений.",
+    "emptyText": "Консультаций пока нет.",
+    "routeName": "My consultations"
+  },
+  "settings": {
+    "deleteAccount": "Delete account",
+    "title": "Setup",
+    "notifications": "Настройки уведомлений",
+    "payment": "Оплата",
+    "promocodes": "Промокоды",
+    "pinAndTouchId": "Pin-код и Touch ID",
+    "pinAndFaceId": "Pin-код и Face ID",
+    "faq": "Частозадаваемые вопросы",
+    "support": "Техническая поддержка",
+    "aboutApp": "О приложении",
+    "password": "Сменить пароль"
+  },
+  "Reminders": {
+    "emptyText": "No notifications."
+  },
+  "SelectMedia": {
+    "accessToPhotosDenied": "Доступ к фото запрещен. Откройте доступ в настройках устройства",
+    "routeName": "Выберите фото или видео"
+  },
+  "SignUp": {
+    "errors": {
+      "blankEmail": "The e-mail cannot be empty",
+      "blankFirstName": "The name cannot be empty",
+      "blankLastName": "The surname cannot be empty",
+      "blankMiddleName": "The patronymic cannot be empty",
+      "blankPassword": "The password cannot be empty",
+      "blankPasswordConfirmation": "The password confirmation cannot be empty",
+      "blankPhone": "The telephone cannot be empty",
+      "invalidFormatPhone": "The telephone has an incorrect format",
+      "passwordsMismatch": "The password and the confirmation don't match"
+    }
+  },
+  "Telemed": {
+    "chatsList": {
+      "noVisits": "No records."
+    },
+    "activeConsultation": "Active consultation",
+    "myConsultations": "My consultations",
+    "routeName": "Online consultations",
+    "tapToReturnToCall": "Tap to return to call"
+  },
+  "Video": {
+    "connectionStatus": {
+      "authorizing": "Authorizing...",
+      "connecting": "Connecting..."
+    }
+  },
+  "Visit": {
+    "choises": {
+      "doctors": "Searching for doctor ina clinic by name",
+      "online": "Online consultationat home"
+    }
+  },
+  "VisitSuccess": {
+    "result": {
+      "default": "The appointment is madesuccessfully!",
+      "guestRequest": "Thank you, the applicationfor the consultation has been accepted, wewill contact you within 1 hour!",
+      "withPayment": "Consultation paid successfully!You have an appointment."
+    }
+  },
+  "clinicTabs": {
+    "contacts": "Contacts",
+    "doctors": "Doctors",
+    "photos": "Photos",
+    "reviews": "Reviews"
+  },
+  "contentState": {
+    "empty": "Not found.",
+    "error": "An error occurred, please try again later."
+  },
+  "errors": {
+    "cannotBeEmpty": {
+      "female": "cannot be empty",
+      "male": "cannot be empty"
+    },
+    "passwordsMismatch": "Passwords are mismatch"
+  },
+  "fastDecisions": {
+    "aboutClinic": "Aboutthe clinic",
+    "ambulance": "Callambulance",
+    "analyzes": "Analysisresults",
+    "apointment": "Make appointment",
+    "appointment": "Makeappointment",
+    "callTheClinic": "Callthe clinic",
+    "chat": "Online chat",
+    "child": "Sickbaby",
+    "flu": "Cold",
+    "head": "Headache",
+    "stomach": "Stomachache"
+  },
+  "fileSizeUnits": {
+    "Bytes": "Bytes",
+    "EB": "EB",
+    "GB": "GB",
+    "KB": "KB",
+    "MB": "MB",
+    "PB": "PB",
+    "TB": "TB",
+    "YB": "YB",
+    "ZB": "ZB"
+  },
+  "invoices": {
+    "all": "All",
+    "download": "Download receipt",
+    "emptyListText": "Invoices not found",
+    "errorPayment": "An error occurred while paying",
+    "history": "History of operations",
+    "methods": "Payment methods",
+    "notPaid": "Not paid",
+    "paid": "Paid",
+    "payAction": "Pay",
+    "payBill": "Pay bill",
+    "paymentTitle": "Payment",
+    "paymentWebTitle": "Choose your payment method",
+    "scoreTitle": "Bill",
+    "status": "Status",
+    "title": "Payment and bills",
+    "unpaid": "Unpaid",
+    "unpaidBills": "Unpaid bills"
+  },
+  "mkkRecordsFilters": {
+    "Analyze": "Analyzes",
+    "Appointments": "Records",
+    "Consultation": "Consultation",
+    "Diagnostic": "Diagnostic",
+    "Other": "Other",
+    "Prescriptions": "Prescriptions",
+    "Procedure": "Procedures",
+    "Results": "Results",
+    "Statement": "Statements",
+    "Visits": "Visits"
+  },
+  "notificationActions": {
+    "came": "I came",
+    "details": "In detail",
+    "goToRecord": "Go to record",
+    "pay": "Pay"
+  },
+  "notificationGroups": {
+    "all": "All",
+    "assignments": "Prescriptions",
+    "directions": "Referrals",
+    "mmk": "MMR",
+    "online": "Online",
+    "other": "Other",
+    "recommendations": "Recommendations"
+  },
+  "openInMaps": {
+    "message": "What app would you like to use?",
+    "title": "Open in Maps"
+  },
+  "picker": {
+    "doneText": "Select",
+    "placeholder": "Select from list"
+  },
+  "recordInfo": {
+    "date": "Date",
+    "description": "Description",
+    "type": "Type"
+  },
+  "scenes": {
+    "SignInWithEmail": {
+      "headTitle": "Are you already our patient?",
+      "signup": {
+        "part1": "In case it's your first consultation, you need",
+        "part2": "to get registered."
+      },
+      "sendRequestWithoutAuth": "Leave request without registration"
+    },
+    "ConfirmVisit": {
+      "sendRequest": "Send request"
+    },
+    "ConfirmationCode": {
+      "changeEmail": "Another e-mail",
+      "title": {
+        "email": "Enter the confirmation code sent by e-mail"
+      }
+    },
+    "EditProfile": {
+      "deleteAccount": {
+        "button": "Delete profile",
+        "confirmationModal": {
+          "message": "Impossible to cancel. Would you like to confirm?",
+          "title": "Profile deletion"
+        }
+      },
+      "gender": {
+        "F": "Female",
+        "M": "Male"
+      },
+      "routeName": "Profile editing"
+    },
+    "FastDecision": {
+      "buttons": {
+        "aboutClinic": "In detail",
+        "ambulance": "Call ambulance",
+        "analyzes": "To the results",
+        "appointment": "Go to the record",
+        "callTheClinic": "Call",
+        "chat": "Go to chat",
+        "child": "Sickbaby",
+        "flu": "Cold",
+        "head": "Headache",
+        "stomach": "Find a general physician"
+      },
+      "text": {
+        "aboutClinic": "About the clinic",
+        "ambulance": "After clicking the button, you'll be connected with the ambulance operator.",
+        "analyzes": "You can quickly get your analysis results.",
+        "appointment": "Make an appointment",
+        "callTheClinic": "Call theclinic",
+        "chat": "Online chat",
+        "child": "Sickbaby",
+        "flu": "Cold",
+        "head": "Headache",
+        "stomach": "You'll probably need a consultation of gastroenterologist. But first, a general physician’s consultation is needed."
+      }
+    },
+    "Home": {
+      "title": {
+        "signIn": {
+          "part1": "To get access to all services, you need",
+          "part2": "to enter"
+        }
+      },
+      "visits": {
+        "title": "Records"
+      }
+    },
+    "Profile": {
+      "card": "Health record",
+      "editProfile": "Edit profile",
+      "title": "Profile"
+    },
+    "SignUpWithEmailStep1Fio": {
+      "title": "Please enter your details to continue"
+    },
+    "SignUpWithEmailStep2Phone": {
+      "phone": "Your phone number",
+      "title": "Enter contact phone number"
+    },
+    "SignUpWithEmailStep3Email": {
+      "change": "Change",
+      "email": "Your e-mail",
+      "title": "Give your e-mail"
+    },
+    "SignUpWithEmailStep4Password": {
+      "password": "Password",
+      "passwordConfirmation": "Confirm the password",
+      "title": "Set password"
+    }
+  },
+  "specsList": {
+    "emptyText": "The list of specialists is empty."
+  },
+  "timeShort": {
+    "hour": "h",
+    "min": "m",
+    "sec": "s"
+  },
+  "visitInfo": {
+    "came": "I came!",
+    "cameHelp": "Hold the button for 3 seconds",
+    "cancel": "Cancel visit",
+    "faster": "Get a diagnosis faster",
+    "openChat": "Перейти в чат",
+    "tellDoctor": "Tell your doctor about your arrival to invite you to an appointment"
+  },
+  "visitsList": {
+    "title": {
+      "offlineConsultation": "Doctor's consultation",
+      "onlineConsultation": "Online consultation"
+    },
+    "openVisitChat": "Pass to",
+    "orderNotPaid": "The oder is not paid",
+    "passedTime": "In process {{time}}",
+    "pay": "Pay"
+  },
+  "year": {
+    "few": "{{count}} years",
+    "many": "{{count}} years",
+    "one": "{{count}} year",
+    "other": "{{count}} years"
+  }
+}

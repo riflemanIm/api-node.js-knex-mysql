@@ -51,11 +51,14 @@ router.get("/download/:lang/:pname", async (req, res) => {
             ...obj,
             [item.gkey]: {
               ...obj[item.gkey],
-              [item.tkey]: item[`lang_${lang}`],
+              [item.tkey]: item[`lang_${lang}`].replace(/(\r\n|\n|\r)/gm, ""),
             },
           };
         }
-        return { ...obj, [item.tkey]: item[`lang_${lang}`] };
+        return {
+          ...obj,
+          [item.tkey]: item[`lang_${lang}`].replace(/(\r\n|\n|\r)/gm, ""),
+        };
       }, {});
       //console.log("\n\n\n -- object --- \n\n\n", object);
       const objectTrans = {};
@@ -75,7 +78,7 @@ router.get("/download/:lang/:pname", async (req, res) => {
         "Content-Type": "application/json-my-attachment",
         "content-disposition": `attachment; filename="${lang}.json"`,
       });
-      res.end(JSON.stringify(objectTrans));
+      res.end(JSON.stringify(objectTrans, null, 2));
     }
   } catch (err) {
     res.status({ err: "The translation information could not be retrieved" });
@@ -98,50 +101,27 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
       const translation = JSON.parse(buffer.toString("utf8"));
 
       const lang = filename.split(".")[0];
-      console.log(
-        "\n ------- lang ------\n",
-        lang,
-        pname,
-        "checked",
-        checked,
-        "\n\n"
-      );
       let parentTKeys = [];
       let oldLevel = 0;
       let level = 0;
-      const transform = async (object, gkey) => {
+      const transform = (object, gkey) => {
         for (const [tkey, obj] of Object.entries(object)) {
-          console.log("level:", level, "  oldLevel:", oldLevel);
+          //console.log("level:", level, "  oldLevel:", oldLevel);
 
-          console.log("parentTKeys", parentTKeys, parentTKeys.length);
+          //console.log("parentTKeys", parentTKeys, parentTKeys.length);
           if (typeof obj === "object") {
             console.log("object");
             parentTKeys.push(tkey);
             level++;
-            await transform(obj, gkey);
-            level--;
-            parentTKeys = parentTKeys.slice(0, level - 1);
+            transform(obj, gkey);
+
+            parentTKeys = parentTKeys.slice(0, level);
           } else {
             const fullTKey =
               parentTKeys.length > 0 && typeof parentTKeys === "object"
                 ? `${parentTKeys.join(".")}.${tkey}`
                 : tkey;
-            console.log(
-              " gkey:",
-              gkey,
-              "\t",
-              "parentTKeys:",
-              parentTKeys,
-              "\t",
-              "tkey:",
-              fullTKey,
-              "\t",
-              "lang_conent:",
-              obj,
-
-              "\n\n"
-            );
-
+            //console.log(fullTKey, "\t", "\n\n");
             if (tkey !== "")
               translationsDB.saveTranslation(
                 gkey,
@@ -149,11 +129,12 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
                 pname,
                 obj,
                 account_id,
-                checked,
+                checked === "true" ? true : false,
                 lang
               );
           }
           oldLevel = level;
+          level--;
         }
       };
 
@@ -163,10 +144,10 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
           level = 0;
           const fobj = {};
           fobj[`${gkey}`] = object;
-          await transform(fobj, "");
+          transform(fobj, "");
         } else {
           level++;
-          await transform(object, gkey);
+          transform(object, gkey);
         }
       }
       //send response

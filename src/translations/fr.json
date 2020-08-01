@@ -1,0 +1,608 @@
+{
+  "Adres": "Adresse",
+  "Aktsyy": "Promotions",
+  "Aktsyya": "Promotion",
+  "Allergologist-immunologist": "Immunologiste allergologue",
+  "Anonymno": "Anonymement",
+  "Anonymnye": "Anonymes",
+  "Avtoryzatsyya-cherez-Hosusluhy": "Autorisation par les Services Publics",
+  "Blyzhayshye-sobytyya": "Événements à venir",
+  "Budushchye": "Futures",
+  "Bystrye-reshenyya": "Solutions rapides",
+  "Bystryy-dostup": "Accès rapide",
+  "CHastozadavaemye-voprosy": "Foire Aux Questions",
+  "Da": "Oui",
+  "Dannaya-usluha-vkhodyt-v-sostav-prohrammy-hodovoho": "Ce service fait partie du programme de la souscription annuelle. Il peut également être fourni pour les abonnements individuels, familiaux et ceux d'entreprise, optimisant vos coûts de services médicaux.",
+  "Data-konsul-tatsyy": "Date de consultation",
+  "Demo-vkhod": "Connexion démo",
+  "Dety": "Enfants",
+  "Dobro-pozhalovat": "Bienvenue",
+  "Dokument": "Document",
+  "Dokumenty": "Documents",
+  "E-mail": "E-mail",
+  "E-mail-ne-podtverzhden": "E-mail non vérifié !",
+  "E-mail-yly-lohyn": "E-mail ou login",
+  "Ear-nose-throat-specialist": "Oto-rhino-laryngologue",
+  "Esly-u-Vas-net-rehystratsyy-na-Hosusluhakh-ESYA-yl": "Vous devez vous inscrire sur le site pour accéder à l'application si vous n'êtes pas inscrit aux Services Publics, ou si votre compte n'est pas validé.",
+  "FirstName": "Prénom",
+  "Foto-klynyky": "Photo de la clinique",
+  "General-specialist": "Spécialiste général",
+  "Gynecologist": "Gynécologue",
+  "Hde-prynymaet": "Lieu de la consultation",
+  "Heart-specialist": "Heart specialist",
+  "Immune-system-specialist": "Spécialiste du système immunitaire",
+  "KHranyte-vse-dannye-o-zdorov-e": "Garder toutes les données",
+  "Kod-podtverzhdenyya": "Code de vérification",
+  "Kod-podtverzhdenyya-prosrochen": "Le code de vérification a expiré !",
+  "Konsul-tatsyya-otmenena": "Consultation annulée !",
+  "Kontakty": "Contacts",
+  "LastName": "Nom",
+  "MiddleName": "Patronyme",
+  "Mobyl-naya": "Dossier médical",
+  "Na-hlavnuyu": "Page principale",
+  "Na-karte": "Sur la carte",
+  "Napomynanyya": "Rappels",
+  "Napravlenye-k-travmatolohu": "Prescription d'examen chez le traumatologue",
+  "Napravlenye-na-renthen": "Prescription à la radiographie",
+  "Napravlenyya": "Prescriptions d'examen",
+  "Nastroyka-uvedomlenyy": "Configurer les notifications",
+  "Ne-anonymnye": "Non anonymes",
+  "Ne-seychas": "Pas maintenant",
+  "Ne-udalos-yspol-zovat-Touch-Id-dlya-vkhoda-v-prylo": "Échec d'utilisation de Touch Id pour accéder à l'application.",
+  "Nervous-system-specialist": "Spécialiste du système nerveux",
+  "Net-svobodnykh-zapysey": "Pas de temps libre",
+  "Neurologist": "Neurologue",
+  "Nevernyy-e-mail": "E-mail non valide",
+  "Nevernyy-kod-podtverzhdenyya": "Code de vérification incorrect",
+  "Nevernyy-lohyn-yly-parol": "Nom d'utilisateur ou mot de passe incorrect !",
+  "Nevernyy-parol": "Mot de passe incorrect !",
+  "O-klynyke": "À propos de la clinique",
+  "O-prylozhenyy": "A propos de l'application",
+  "O-vrache": "À propos du médecin",
+  "OK": "OK",
+  "Obrazovanye": "Éducation",
+  "Onlayn": "En ligne",
+  "Optional": "non obligatoire",
+  "Ostav-te-svoy-otzyv": "Déposez votre avis",
+  "Ostavyt-otzyv": "Laisser un avis",
+  "Otmenyt-zapys": "Annuler la consultation",
+  "Otorhinolaringologist": "ORL",
+  "Otsenky": "Notes",
+  "Otzyvy-o-klynyke": "Votre avis sur la clinique",
+  "Otzyvy-o-vrache": "Votre avis sur le médecin",
+  "PIN-kod": "le code PIN",
+  "Password": "Mot de passe",
+  "Patsyent": "Patient",
+  "Pediatrician": "Pédiatre",
+  "Pereyty-v-profyl": "Profil",
+  "Pervychnyy-pryem": "Consultation primaire",
+  "Phone": "Téléphone",
+  "Pin-kod-y-Touch-ID": "Code PIN et Touch ID",
+  "Podrobnee-ob-usluhe": "Plus sur le service",
+  "Podrobnye-uslovyya": "Termes détaillés",
+  "Podtverdyte-dannye": "Confirmer les données",
+  "Podtverdyte-parol": "Confirmer le mot de passe",
+  "Pol-zovatel-skoe-sohlashenye": "Accord de l'utilisateur",
+  "Poluchayte-konsul-tatsyy": "Consultation instantanée",
+  "Poluchayte-napomynanyya": "Rappels sur les",
+  "Ponyatno": "Clair",
+  "Posmotryte-raspysanye-na": "Voir l'horaire à",
+  "Povtornyy-pryem": "Consultation répétée",
+  "Povtoryte": "Répétez",
+  "Poysk-troetochie": "Rechercher...",
+  "Promokod-uspeshno": "Le code promo a été appliqué",
+  "Promokody": "Codes promotionnels",
+  "Propustyt": "Effacer",
+  "Prosto-vyberyte-neobkhodymoho": "Il suffit de sélectionner le médecin dont vous avez besoin.",
+  "Prylozhyte-palets-chtoby-voyty-v-prylozhenye": "Scannez votre doigt pour entrer dans l'application.",
+  "Prymenyt": "Appliquer",
+  "Prynyat-sohlashenye": "Accepter l'accord",
+  "Pys-mo-s-kodom-podtverzhdenyya-otpravleno-na": "Un e-mail de confirmation a été envoyé à",
+  "Sbrosyt": "Effacer",
+  "Sbrosyt-vse": "Tout effacer",
+  "Sehodnya": "Aujourd'hui",
+  "Set": "Donnez",
+  "Snachala-novye": "Nouveaux en premier",
+  "Snachala-otrytsatel-nye": "Négatifs en premier",
+  "Snachala-polozhytel-nye": "Positifs en premier",
+  "Sortyrovat-rezul-taty": "Trier les résultats",
+  "Spasybo-za-otzyv": "Merci pour votre avis !",
+  "Specialist-for-children": "Spécialiste pour les enfants",
+  "Spetsyalysty": "Spécialistes",
+  "Spetsyalyzatsyya": "Spécialisation",
+  "Spysok-uvedomlenyy": "Liste de notifications",
+  "Surgeon": "Chirurgien",
+  "Surgical-treatment": "Traitement chirurgical",
+  "Takoy-E-mail-uzhe-byl-zarehystryrovan": "Cet e-mail a déjà été enregistré !",
+  "Tekhnycheskaya-podderzhka": "Support technique",
+  "Tekst-otzyva": "Votre avis",
+  "Therapist": "Généraliste",
+  "Traumatologist": "Traumatologue",
+  "Treatment-of-injuries-and-post-injury-syndromes": "Traitement des blessures et des syndromes post-blessure",
+  "Typ-pryema": "Type de consultation",
+  "Typ-zapysy": "Type de la consultation",
+  "Upravlyayte-semeynoy": "Gérez votre",
+  "V-klynyke": "À la clinique",
+  "Vkhod": "Connexion",
+  "Vklyuchyt-uvedomlenyya": "Activer les notifications",
+  "Vklyuchyte-uvedomlenyya-y-my": "Activer les notifications et nous",
+  "Voyty": "Accéder",
+  "Voyty-cherez-Hosusluhy": "Se connecter via les Services Publics",
+  "Vrach": "Médecin",
+  "Vse": "Tous",
+  "Vse-aktsyy": "Toutes les promotions",
+  "Vvedyte": "Tapez",
+  "Vvedyte-e-mail-yly-lohyn": "Saisissez votre e-mail ou identifiant",
+  "Vvedyte-kod-podtverzhdenyya": "Entrez le code de vérification",
+  "Vvedyte-parol": "Entrez le mot de passe",
+  "Vy-deystvytel-no-khotyte-otmenyt-zapys": "Êtes-vous sûr de vouloir annuler la consultation ?",
+  "Vyberyte": "Sélectionnez",
+  "Vyberyte-datu-y-vracha": "Sélectionnez la date et le médecin",
+  "Vyberyte-klynyku": "Choisissez une clinique",
+  "Vyberyte-spetsyalyzatsyyu": "Sélectionnez une spécialisation",
+  "Vybrat-klynyku": "Sélectionner une clinique",
+  "Vyslat-kod-eshche-raz": "Renvoyer le code",
+  "Vyyty": "Sortir",
+  "Vzroslye": "Adultes",
+  "Women-health": "Santé des femmes",
+  "Ynfo": "Info",
+  "Ynformatsyya-o-sobytyy": "Renseignements sur l'événement",
+  "Yspol-zovat-Touch-ID-dlya": "Utiliser Touch ID pour",
+  "Zabotyt-sya-o-svoem-zdorov-e-stalo-proshche-Uznayt": "Prendre soin de votre santé est devenu plus facile ! Entrez pour savoir comment le faire.",
+  "Zadavayte-lyubye-ynteresuyushchye": "Posez des questions",
+  "Zaholovok-otzyva": "Titre de l'avis",
+  "Zapys-na-pryem": "Rendez-vous",
+  "Zapysat-sya": "Fixer rendez-vous",
+  "Zapysat-sya-na-konsul-tatsyyu": "Inscrivez-vous pour une consultation",
+  "Zapysy-na-pryem": "Mes rendez-vous",
+  "Zapysyvaytes-k-vrachu": "Fixez rendez-vous chez le médecin",
+  "Zarehystryrovat-sya": "S'inscrire",
+  "Zavershennye": "Terminés",
+  "bez-avtoryzatsyy": "sans autorisation",
+  "bez-ocheredey": "sans files d'attente",
+  "birthDate": "Date de naissance",
+  "blyzhayshye-dny": "jours à venir",
+  "cabinet": "Cabinet",
+  "cancel": "Annuler",
+  "cherez-prylozhenye": "via l'application",
+  "clinic": "Clinique",
+  "consultationType": "Type de la consultation",
+  "diplomasAndCertificates": "Diplômes et certificats",
+  "doctorSpecialization": "Spécialisation du médecin",
+  "dokument-MobiApp": "Document MobiApp",
+  "dostupno-v-polnoy-versyy": "disponible en version complète",
+  "error": "Erreur",
+  "experience": "ancienneté",
+  "gender": "Sexe",
+  "k-medytsynskym-usluham": "aux services médicaux",
+  "konkretnoho-vracha": "le médecin en particulier",
+  "medkartoy": "dossier familial",
+  "medytsynskaya-karta": "mobile",
+  "more": "encore",
+  "next": "Plus loin",
+  "notifications": "Notifications",
+  "nuzhnuyu-klynyku": "la bonne clinique",
+  "nykakykh-bumah": "pas de papiers !",
+  "o-klynyke": "à propos de la clinique",
+  "o-predstoyashchykh-sobytyyakh": "événements à venir",
+  "o-vrache": "à propos du médecin",
+  "online": "En ligne",
+  "opovestym-Vas-o-blyzhayshykh-sobytyyakh": "vous informerons des événements à venir",
+  "otsenok": "notes",
+  "po-rasstoyanyyu": "par distance",
+  "po-reytynhu": "par note",
+  "priceFrom": "de",
+  "proceed": "Continuer",
+  "prymenen": "avec succès !",
+  "qrCodeLabel": "Apportez le téléphone au terminal, l'écran au lecteur",
+  "ready": "Prêt",
+  "reviews": "Avis",
+  "save": "Sauvegarder",
+  "sehodnya": "aujourd'hui",
+  "spetsyalysta-y-zapyshytes-na-pryem": "et fixer rendez-vous",
+  "spetsyalystov-mhnovenno": "des spécialistes",
+  "spetsyalyzatsyyu-vracha": "la spécialisation du médecin",
+  "v-Vashem-kalendare": "sur votre calendrier",
+  "vas-voprosy-kvalyfytsyrovannym": "qui vous intéressent",
+  "vashey-sem-y-v-odnom-prylozhenyy": "de votre famille dans une application,",
+  "vchera": "hier",
+  "vkhoda-v-prylozhenye": "accéder à l'application ?",
+  "vracham-v-udobnoe-vremya-sutok": "24 h sur 24",
+  "yly-v-lyubom-TSentre-obsluzhyvanyya-pol-zovateley": "ou à n'importe quel centre de Service Utilisateur",
+  "zapys": "enregistrement",
+  "zapysey": "enregistrements",
+  "zapysy": "enregistrements",
+  "zavtra": "demain",
+  "Cardiologist": "Cardiologue",
+  "pinAndTouchId": {
+    "pinCode": "Pin-код",
+    "loginByPin": "Вход по pin-коду",
+    "changePin": "Именить pin-код",
+    "setPin": "Установить pin-код",
+    "disablePin": "Отключить pin-код",
+    "loginBy": "Вход по ",
+    "ebableLoginBy": "Разрешить вход по ",
+    "pinChanged": "Pin-код успешно изменён",
+    "pinDisabled": "Pin-код отключен"
+  },
+  "touchId": "Touch ID",
+  "faceId": "Face ID",
+  "pin": {
+    "enterPin": "Введите pin-код",
+    "enterCurrentPin": "Введите текущий pin-код",
+    "createPin": "Придумайте pin-код",
+    "repeatPin": "Повторите pin-код"
+  },
+  "common": {
+    "success": "Успешно"
+  },
+  "AboutApp": {
+    "appVersion": "Version : {{appVersion}}"
+  },
+  "ChangePassword": {
+    "confirmNewPassword": "Confirmer le nouveau mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "success": {
+      "message": "Vous avez changé votre mot de passe",
+      "title": "Avec succès"
+    },
+    "title": "Changer le mot de passe"
+  },
+  "ChangePasswordConfirm": {
+    "errors": {
+      "confirmationCodeExpired": "Le code de confirmation est expiré. Un nouveau code vous a été envoyé",
+      "wrongConfirmationCode": "Code de confirmation invalide"
+    },
+    "newCodeSent": "Le code a été envoyé à votre e-mail",
+    "title": "Confirmez le changement du mot de passe"
+  },
+  "ChangePin": {
+    "success": {
+      "message": "Vous avez changé le code PIN",
+      "title": "Avec succès"
+    },
+    "title": "Changer le code PIN"
+  },
+  "Chat": {
+    "accessToCameraDenied": {
+      "close": "Fermer",
+      "message": "Allez dans Paramètres pour ouvrir l'accès",
+      "settings": "Paramètres",
+      "title": "L'accès à la caméra n'est pas autorisé"
+    },
+    "accessToGalleryDenied": {
+      "close": "Fermer",
+      "message": "Allez dans Paramètres pour ouvrir l'accès",
+      "settings": "Paramètres",
+      "title": "L'accès à la galerie n'est pas autorisé"
+    },
+    "addAttachment": {
+      "cancel": "Annuler",
+      "takePhoto": "Prendre une photo",
+      "uploadDocument": "Téléchargez un document",
+      "uploadMedia": "Télécharger une photo / vidéo",
+      "uploadPhoto": "Télécharger une photo"
+    },
+    "messagesPlaceholder": "Il n'y a pas de messages actuellement.",
+    "placeholder": "Message...",
+    "routeName": "Discutez avec un médecin",
+    "serviceMessage": "Message de service"
+  },
+  "ConfirmVisit": {
+    "consultationPrice": "Prix de la consultation",
+    "consultationType": {
+      "offline": "Réception clinique",
+      "online": "En ligne",
+      "title": "Type de consultation",
+      "total": "Total"
+    }
+  },
+  "ConfirmationCode": {
+    "codeCanBeSendOnlyAfterXSecs": {
+      "few": "Le nouveau code ne peut être envoyé qu'en {{count}} secondes",
+      "many": "Le nouveau code ne peut être envoyé qu'en {{count}} secondes",
+      "one": "Le nouveau code ne peut être envoyé qu'en {{count}} seconde",
+      "other": "Le nouveau code ne peut être envoyé qu'en {{count}} secondes"
+    }
+  },
+  "DeleteUserAccount": {
+    "confirm": "Confirmer la suppression du compte",
+    "errors": {
+      "mmkAlreadyExists": "Le compte ne peut pas être supprimé car le dossier médical mobile a déjà été créé"
+    },
+    "success": "Compte supprimé"
+  },
+  "MMK": {
+    "noRecords": "Il n'y a pas d'enregistrements actuellement"
+  },
+  "MyConsultations": {
+    "emptyLastMessage": "Il n'y a pas de messages actuellement.",
+    "emptyText": "Il n'y a pas de consultations actuellement.",
+    "routeName": "Mes consultations"
+  },
+  "settings": {
+    "deleteAccount": "Supprimer le compte",
+    "title": "Paramètres",
+    "notifications": "Настройки уведомлений",
+    "payment": "Оплата",
+    "promocodes": "Промокоды",
+    "pinAndTouchId": "Pin-код и Touch ID",
+    "pinAndFaceId": "Pin-код и Face ID",
+    "faq": "Частозадаваемые вопросы",
+    "support": "Техническая поддержка",
+    "aboutApp": "О приложении",
+    "password": "Сменить пароль"
+  },
+  "Reminders": {
+    "emptyText": "Il n'y a pas de notifications actuellement."
+  },
+  "SelectMedia": {
+    "accessToPhotosDenied": "L'accès à la photo n'est pas autorisé. Veuillez ouvrir l'accès dans les paramètres de l'appareil",
+    "routeName": "Sélectionnez une photo ou une vidéo"
+  },
+  "SignUp": {
+    "errors": {
+      "blankEmail": "L'e-mail ne doit pas être vide",
+      "blankFirstName": "Le prénom ne doit pas être vide",
+      "blankLastName": "Le nom ne doit pas être vide",
+      "blankMiddleName": "Le patronyme ne doit pas être vide",
+      "blankPassword": "Le mot de passe ne doit pas être vide",
+      "blankPasswordConfirmation": "La confirmation du mot de passe ne doit pas être vide",
+      "blankPhone": "Le téléphone ne doit pas être vide",
+      "invalidFormatPhone": "Le format du téléphone n'est pas correct",
+      "passwordsMismatch": "Le mot de passe et la confirmation ne correspondent pas"
+    }
+  },
+  "Telemed": {
+    "chatsList": {
+      "noVisits": "Il n'y a pas d'enregistrements actuellement."
+    },
+    "activeConsultation": "Consultation active",
+    "myConsultations": "Mes consultations",
+    "routeName": "Consultations en ligne",
+    "tapToReturnToCall": "Appuyez pour revenir à l'appel"
+  },
+  "Video": {
+    "connectionStatus": {
+      "authorizing": "Autorisation en cours ...",
+      "connecting": "Connexion en cours ..."
+    }
+  },
+  "Visit": {
+    "choises": {
+      "doctors": "Rechercher le médecin au centre médical par le nom",
+      "online": "Consultation en ligneà la maison"
+    }
+  },
+  "VisitSuccess": {
+    "result": {
+      "default": "Vous avez enregistré un rendez-vousavec succès !",
+      "guestRequest": "Merci, la demande de consultation a été acceptée, nous vous contacterons d'ici une heure !",
+      "withPayment": "La consultation a été payée avec succès !Votre rendez-vous est validé."
+    }
+  },
+  "clinicTabs": {
+    "contacts": "Contacts",
+    "doctors": "Médecins",
+    "photos": "Photos",
+    "reviews": "Avis"
+  },
+  "contentState": {
+    "empty": "Impossible de trouver.",
+    "error": "Une erreur s'est produite. Essayez plus tard."
+  },
+  "errors": {
+    "cannotBeEmpty": {
+      "female": "ne doit pas être vide",
+      "male": "ne doit pas être vide"
+    },
+    "passwordsMismatch": "Non concordance des mots de passe"
+  },
+  "fastDecisions": {
+    "aboutClinic": "À propos dela clinique",
+    "ambulance": "Appelerl'ambulance",
+    "analyzes": "Résultats desanalyses",
+    "apointment": "Prendre unrendez-vous",
+    "appointment": "Prendre rendez-vous",
+    "callTheClinic": "Appeler à laclinique",
+    "chat": "Discussionen ligne",
+    "child": "L'enfantest malade",
+    "flu": "Froid",
+    "head": "Ça fait malà la tête",
+    "stomach": "Ça fait malau ventre"
+  },
+  "fileSizeUnits": {
+    "Bytes": "Octets",
+    "EB": "EB",
+    "GB": "GB",
+    "KB": "KB",
+    "MB": "MB",
+    "PB": "PB",
+    "TB": "TB",
+    "YB": "YB",
+    "ZB": "ZB"
+  },
+  "invoices": {
+    "all": "Tous",
+    "download": "Télécharger le reçu",
+    "emptyListText": "Les factures n'ont pas été trouvées",
+    "errorPayment": "Une erreur s'est produite lors du paiement",
+    "history": "Historique des opérations",
+    "methods": "Moyens de paiement",
+    "notPaid": "Impayé",
+    "paid": "Réglé",
+    "payAction": "Payer",
+    "payBill": "Régler la facture",
+    "paymentTitle": "Paiement",
+    "paymentWebTitle": "Choisissez un moyen de paiement",
+    "scoreTitle": "Facture",
+    "status": "Statut",
+    "title": "Paiement et factures",
+    "unpaid": "Impayées",
+    "unpaidBills": "Factures impayées"
+  },
+  "mkkRecordsFilters": {
+    "Analyze": "Analyses",
+    "Appointments": "Enregistrements",
+    "Consultation": "Consultations",
+    "Diagnostic": "Diagnostic",
+    "Other": "Autre",
+    "Prescriptions": "Prescriptions",
+    "Procedure": "Procédures",
+    "Results": "Résultats",
+    "Statement": "Déclarations",
+    "Visits": "Consultations"
+  },
+  "notificationActions": {
+    "came": "Je suis venu(e)",
+    "details": "En détail",
+    "goToRecord": "Aller à l'enregistrement",
+    "pay": "Régler"
+  },
+  "notificationGroups": {
+    "all": "Tous",
+    "assignments": "Prescriptions",
+    "directions": "Prescriptions d'examen",
+    "mmk": "DPM",
+    "online": "En ligne",
+    "other": "Autre",
+    "recommendations": "Recommandations"
+  },
+  "openInMaps": {
+    "message": "Quelle application souhaitez-vous utiliser ?",
+    "title": "Ouvrir dans Maps"
+  },
+  "picker": {
+    "doneText": "Sélectionnez",
+    "placeholder": "Sélectionnez dans la liste"
+  },
+  "recordInfo": {
+    "date": "Date",
+    "description": "Description",
+    "type": "Type"
+  },
+  "scenes": {
+    "SignInWithEmail": {
+      "headTitle": "Êtes-vous déjà notre patient ?",
+      "signup": {
+        "part1": "Si c'est la première fois que vous nous contactez, vous avez besoin",
+        "part2": "de vous inscrire."
+      },
+      "sendRequestWithoutAuth": "Laisser la demande sans inscription"
+    },
+    "ConfirmVisit": {
+      "sendRequest": "Envoyer une demande"
+    },
+    "ConfirmationCode": {
+      "changeEmail": "Un autre e-mail",
+      "title": {
+        "email": "Entrez le code de confirmation envoyé par e-mail"
+      }
+    },
+    "EditProfile": {
+      "deleteAccount": {
+        "button": "Supprimer le profil",
+        "confirmationModal": {
+          "message": "Impossible d'annuler l'action. Voulez-vous confirmer ?",
+          "title": "Suppression du profil"
+        }
+      },
+      "gender": {
+        "F": "Féminin",
+        "M": "Masculin"
+      },
+      "routeName": "Modification du profil"
+    },
+    "FastDecision": {
+      "buttons": {
+        "aboutClinic": "En détail",
+        "ambulance": "Appeler le SAMU",
+        "analyzes": "Aux résultats",
+        "appointment": "Aller à l'enregistrement",
+        "callTheClinic": "Appeler",
+        "chat": "Aller au chat",
+        "child": "L'enfantest malade",
+        "flu": "Froid",
+        "head": "Ça fait malà la tête",
+        "stomach": "Trouver un généraliste"
+      },
+      "text": {
+        "aboutClinic": "À propos de la clinique",
+        "ambulance": "Après avoir cliqué sur le bouton, nous vous mettrons en relation avec le service d'ambulance.",
+        "analyzes": "Vous pouvez accéder rapidement aux derniers résultats de vos analyses.",
+        "appointment": "Prendre rendez-vous",
+        "callTheClinic": "Appelerla clinique",
+        "chat": "Discussion en ligne",
+        "child": "L'enfantest malade",
+        "flu": "Froid",
+        "head": "Ça fait malà la tête",
+        "stomach": "Un rendez-vous gastro-entérologue sera probablement nécessaire. Mais vous avez auparavant besoin d'une consultation de généraliste."
+      }
+    },
+    "Home": {
+      "title": {
+        "signIn": {
+          "part1": "Pour accéder à tous les services, vous avez besoin",
+          "part2": "d'entrer"
+        }
+      },
+      "visits": {
+        "title": "Enregistrements"
+      }
+    },
+    "Profile": {
+      "card": "DP",
+      "editProfile": "Modifier le profil",
+      "title": "Profil"
+    },
+    "SignUpWithEmailStep1Fio": {
+      "title": "Veuillez saisir vos coordonnées pour continuer"
+    },
+    "SignUpWithEmailStep2Phone": {
+      "phone": "Votre numéro de téléphone",
+      "title": "Entrez le numéro de téléphone du contact"
+    },
+    "SignUpWithEmailStep3Email": {
+      "change": "Changer",
+      "email": "Votre e-mail",
+      "title": "Entrez votre e-mail"
+    },
+    "SignUpWithEmailStep4Password": {
+      "password": "Mot de passe",
+      "passwordConfirmation": "Confirmez le mot de passe",
+      "title": "Définir le mot de passe"
+    }
+  },
+  "specsList": {
+    "emptyText": "La liste des spécialistes est vide."
+  },
+  "timeShort": {
+    "hour": "h",
+    "min": "m",
+    "sec": "s"
+  },
+  "visitInfo": {
+    "came": "Je suis venu(e) !",
+    "cameHelp": "Maintenez le bouton enfoncé pendant 3 secondes",
+    "cancel": "Annuler le RDV",
+    "faster": "Obtenir le diagnostic plus vite",
+    "openChat": "Перейти в чат",
+    "tellDoctor": "Informez votre médecin de votre arrivée pour vous inviter à la consultation"
+  },
+  "visitsList": {
+    "title": {
+      "offlineConsultation": "Consultation du médecin",
+      "onlineConsultation": "Consultation en ligne"
+    },
+    "openVisitChat": "Aller à",
+    "orderNotPaid": "Commande non payée",
+    "passedTime": "En cours {{time}}",
+    "pay": "Régler"
+  },
+  "year": {
+    "few": "{{count}} ans",
+    "many": "{{count}} ans",
+    "one": "{{count}} an",
+    "other": "{{count}} ans"
+  }
+}

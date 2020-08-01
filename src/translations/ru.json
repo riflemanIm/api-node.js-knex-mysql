@@ -1,0 +1,608 @@
+{
+  "Adres": "Адрес",
+  "Aktsyy": "Акции",
+  "Aktsyya": "Акция",
+  "Allergologist-immunologist": "Аллерголог-иммунолог",
+  "Anonymno": "Анонимно",
+  "Anonymnye": "Анонимные",
+  "Avtoryzatsyya-cherez-Hosusluhy": "Авторизация через Госуслуги",
+  "Blyzhayshye-sobytyya": "Ближайшие события",
+  "Budushchye": "Будущие",
+  "Bystrye-reshenyya": "Быстрые решения",
+  "Bystryy-dostup": "Быстрый доступ",
+  "CHastozadavaemye-voprosy": "Частозадаваемые вопросы",
+  "Da": "Да",
+  "Dannaya-usluha-vkhodyt-v-sostav-prohrammy-hodovoho": "Данная услуга входит в состав программы годового прикрепления. Также может быть предоставлена через абонементы индивидуального, семейного и корпоративного обслуживания, оптимизирующие ваши затраты на медицинские услуги.",
+  "Data-konsul-tatsyy": "Дата консультации",
+  "Demo-vkhod": "Демо-вход",
+  "Dety": "Дети",
+  "Dobro-pozhalovat": "Добро пожаловать!",
+  "Dokument": "Документ",
+  "Dokumenty": "Документы",
+  "E-mail": "E-mail",
+  "E-mail-ne-podtverzhden": "E-mail не подтвержден!",
+  "E-mail-yly-lohyn": "E-mail или логин",
+  "Ear-nose-throat-specialist": "Специалист по заболеваниям уха горла носа",
+  "Esly-u-Vas-net-rehystratsyy-na-Hosusluhakh-ESYA-yl": "Если у Вас нет регистрации на Госуслугах (ЕСИА)или Ваша учетная запись не подтверждена, для входа в приложение Вам требуется зарегистрироваться (подтвердить учетную запись) на сайте",
+  "FirstName": "Имя",
+  "Foto-klynyky": "Фото клиники",
+  "General-specialist": "Специалист общего профиля",
+  "Gynecologist": "Гинеколог",
+  "Hde-prynymaet": "Где принимает",
+  "Heart-specialist": "Специалист по сердцу",
+  "Immune-system-specialist": "Специалист по нарушениям имунной системы",
+  "KHranyte-vse-dannye-o-zdorov-e": "Храните все данные о здоровье",
+  "Kod-podtverzhdenyya": "Код подтверждения",
+  "Kod-podtverzhdenyya-prosrochen": "Код подтверждения просрочен!",
+  "Konsul-tatsyya-otmenena": "Консультация отменена!",
+  "Kontakty": "Контакты",
+  "LastName": "Фамилия",
+  "MiddleName": "Отчество",
+  "Mobyl-naya": "Мобильная",
+  "Na-hlavnuyu": "На главную",
+  "Na-karte": "На карте",
+  "Napomynanyya": "Напоминания",
+  "Napravlenye-k-travmatolohu": "Направление к травматологу",
+  "Napravlenye-na-renthen": "Направление на рентген",
+  "Napravlenyya": "Направления",
+  "Nastroyka-uvedomlenyy": "Настройка уведомлений",
+  "Ne-anonymnye": "Не анонимные",
+  "Ne-seychas": "Не сейчас",
+  "Ne-udalos-yspol-zovat-Touch-Id-dlya-vkhoda-v-prylo": "Не удалось использовать Touch Id для входа в приложение",
+  "Nervous-system-specialist": "Специалист по проблемам нервной системы",
+  "Net-svobodnykh-zapysey": "Нет свободных записей",
+  "Neurologist": "Невролог",
+  "Nevernyy-e-mail": "Некорректный e-mail",
+  "Nevernyy-kod-podtverzhdenyya": "Некорректный код подтверждения",
+  "Nevernyy-lohyn-yly-parol": "Некорректный логин или пароль!",
+  "Nevernyy-parol": "Некорректный пароль!",
+  "O-klynyke": "О клинике",
+  "O-prylozhenyy": "О приложении",
+  "O-vrache": "О враче",
+  "OK": "ОК",
+  "Obrazovanye": "Образование",
+  "Onlayn": "Онлайн",
+  "Optional": "не обязательно",
+  "Ostav-te-svoy-otzyv": "Оставьте свой отзыв",
+  "Ostavyt-otzyv": "Оставить отзыв",
+  "Otmenyt-zapys": "Отменить запись",
+  "Otorhinolaringologist": "ЛОР",
+  "Otsenky": "Оценки",
+  "Otzyvy-o-klynyke": "Отзывы о клинике",
+  "Otzyvy-o-vrache": "Отзывы о враче",
+  "PIN-kod": "PIN-код",
+  "Password": "Пароль",
+  "Patsyent": "Пациент",
+  "Pediatrician": "Педиатр",
+  "Pereyty-v-profyl": "Перейти в профиль",
+  "Pervychnyy-pryem": "Первичный прием",
+  "Phone": "Телефон",
+  "Pin-kod-y-Touch-ID": "Pin-код и Touch ID",
+  "Podrobnee-ob-usluhe": "Подробнее об услуге",
+  "Podrobnye-uslovyya": "Подробные условия",
+  "Podtverdyte-dannye": "Подтвердите данные",
+  "Podtverdyte-parol": "Подтвердите пароль",
+  "Pol-zovatel-skoe-sohlashenye": "Пользовательское соглашение",
+  "Poluchayte-konsul-tatsyy": "Получайте консультации",
+  "Poluchayte-napomynanyya": "Получайте напоминания",
+  "Ponyatno": "Понятно",
+  "Posmotryte-raspysanye-na": "Посмотрите расписание на",
+  "Povtornyy-pryem": "Повторный прием",
+  "Povtoryte": "Повторите",
+  "Poysk-troetochie": "Поиск...",
+  "Promokod-uspeshno": "Промокод успешно",
+  "Promokody": "Промокоды",
+  "Propustyt": "Пропустить",
+  "Prosto-vyberyte-neobkhodymoho": "Просто выберите необходимого",
+  "Prylozhyte-palets-chtoby-voyty-v-prylozhenye": "Приложите палец, чтобы войти в приложение",
+  "Prymenyt": "Применить",
+  "Prynyat-sohlashenye": "Принять соглашение",
+  "Pys-mo-s-kodom-podtverzhdenyya-otpravleno-na": "Письмо с кодом подтверждения отправлено на",
+  "Sbrosyt": "Сбросить",
+  "Sbrosyt-vse": "Сбросить все",
+  "Sehodnya": "Сегодня",
+  "Set": "Придумайте",
+  "Snachala-novye": "Сначала новые",
+  "Snachala-otrytsatel-nye": "Сначала отрицательные",
+  "Snachala-polozhytel-nye": "Сначала положительные",
+  "Sortyrovat-rezul-taty": "Сортировать результаты",
+  "Spasybo-za-otzyv": "Спасибо за отзыв!",
+  "Specialist-for-children": "Специалист для детей",
+  "Spetsyalysty": "Специалисты",
+  "Spetsyalyzatsyya": "Специализация",
+  "Spysok-uvedomlenyy": "Список уведомлений",
+  "Surgeon": "Хирург",
+  "Surgical-treatment": "Лечение оперативными методами",
+  "Takoy-E-mail-uzhe-byl-zarehystryrovan": "Такой E-mail уже был зарегистрирован!",
+  "Tekhnycheskaya-podderzhka": "Техническая поддержка",
+  "Tekst-otzyva": "Текст отзыва",
+  "Therapist": "Терапевт",
+  "Traumatologist": "Травматолог",
+  "Treatment-of-injuries-and-post-injury-syndromes": "Лечение травм и послетравмовых синдромов",
+  "Typ-pryema": "Тип приема",
+  "Typ-zapysy": "Тип записи",
+  "Upravlyayte-semeynoy": "Управляйте семейной",
+  "V-klynyke": "В клинике",
+  "Vkhod": "Вход",
+  "Vklyuchyt-uvedomlenyya": "Включить уведомления",
+  "Vklyuchyte-uvedomlenyya-y-my": "Включите уведомления и мы",
+  "Voyty": "Войти",
+  "Voyty-cherez-Hosusluhy": "Войти через Госуслуги",
+  "Vrach": "Врач",
+  "Vse": "Все",
+  "Vse-aktsyy": "Все акции",
+  "Vvedyte": "Введите",
+  "Vvedyte-e-mail-yly-lohyn": "Введите e-mail или логин",
+  "Vvedyte-kod-podtverzhdenyya": "Введите код подтверждения",
+  "Vvedyte-parol": "Введите пароль",
+  "Vy-deystvytel-no-khotyte-otmenyt-zapys": "Вы действительно хотите отменить запись?",
+  "Vyberyte": "Выберите",
+  "Vyberyte-datu-y-vracha": "Выберите дату и врача",
+  "Vyberyte-klynyku": "Выберите клинику",
+  "Vyberyte-spetsyalyzatsyyu": "Выберите спeциализацию",
+  "Vybrat-klynyku": "Выбрать клинику",
+  "Vyslat-kod-eshche-raz": "Выслать код еще раз",
+  "Vyyty": "Выйти",
+  "Vzroslye": "Взрослые",
+  "Women-health": "Женское здоровье",
+  "Ynfo": "Инфо",
+  "Ynformatsyya-o-sobytyy": "Информация о событии",
+  "Yspol-zovat-Touch-ID-dlya": "Использовать  Touch ID для",
+  "Zabotyt-sya-o-svoem-zdorov-e-stalo-proshche-Uznayt": "Заботиться о своем здоровье стало проще! Узнайте подробнее, как это сделать.",
+  "Zadavayte-lyubye-ynteresuyushchye": "Задавайте любые интересующие",
+  "Zaholovok-otzyva": "Заголовок отзыва",
+  "Zapys-na-pryem": "Запись на прием",
+  "Zapysat-sya": "Записаться",
+  "Zapysat-sya-na-konsul-tatsyyu": "Записаться на консультацию",
+  "Zapysy-na-pryem": "Записи на прием",
+  "Zapysyvaytes-k-vrachu": "Записывайтесь к врачу",
+  "Zarehystryrovat-sya": "Зарегистрироваться",
+  "Zavershennye": "Завершенные",
+  "bez-avtoryzatsyy": "без авторизации",
+  "bez-ocheredey": "без очередей",
+  "birthDate": "Дата рождения",
+  "blyzhayshye-dny": "ближайшие дни",
+  "cabinet": "Номер кабинета",
+  "cancel": "Отмена",
+  "cherez-prylozhenye": "через приложение",
+  "clinic": "Клиника",
+  "consultationType": "Тип консультации",
+  "diplomasAndCertificates": "Дипломы и сертификаты",
+  "doctorSpecialization": "Специализация врача",
+  "dokument-MobiApp": "документ MobiApp",
+  "dostupno-v-polnoy-versyy": "доступно в полной версии",
+  "error": "Ошибка",
+  "experience": "стаж",
+  "gender": "Пол",
+  "k-medytsynskym-usluham": "к медицинским услугам",
+  "konkretnoho-vracha": "конкретного врача",
+  "medkartoy": "медкартой",
+  "medytsynskaya-karta": "медицинская карта",
+  "more": "ещё",
+  "next": "Далее",
+  "notifications": "Уведомления",
+  "nuzhnuyu-klynyku": "нужную клинику",
+  "nykakykh-bumah": "никаких бумаг!",
+  "o-klynyke": "о клинике",
+  "o-predstoyashchykh-sobytyyakh": "о предстоящих событиях",
+  "o-vrache": "о враче",
+  "online": "Онлайн",
+  "opovestym-Vas-o-blyzhayshykh-sobytyyakh": "оповестим Вас о ближайших событиях",
+  "otsenok": "оценок",
+  "po-rasstoyanyyu": "по расстоянию",
+  "po-reytynhu": "по рейтингу",
+  "priceFrom": "от",
+  "proceed": "Продолжить",
+  "prymenen": "применен!",
+  "qrCodeLabel": "Поднесите телефон к терминалу, экраном к считывателю",
+  "ready": "Готово",
+  "reviews": "Отзывы",
+  "save": "Сохранить",
+  "sehodnya": "сегодня",
+  "spetsyalysta-y-zapyshytes-na-pryem": "специалиста и запишитесь на прием",
+  "spetsyalystov-mhnovenno": "специалистов мгновенно",
+  "spetsyalyzatsyyu-vracha": "специализацию врача",
+  "v-Vashem-kalendare": "в Вашем календаре",
+  "vas-voprosy-kvalyfytsyrovannym": "вас вопросы квалифицированным",
+  "vashey-sem-y-v-odnom-prylozhenyy": "вашей семьи в одном приложении,",
+  "vchera": "вчера",
+  "vkhoda-v-prylozhenye": "входа в приложение?",
+  "vracham-v-udobnoe-vremya-sutok": "врачам в удобное время суток",
+  "yly-v-lyubom-TSentre-obsluzhyvanyya-pol-zovateley": "или в любом Центре обслуживания пользователей",
+  "zapys": "запись",
+  "zapysey": "записей",
+  "zapysy": "записи",
+  "zavtra": "завтра",
+  "Cardiologist": "Кардиолог",
+  "pinAndTouchId": {
+    "pinCode": "Pin-код",
+    "loginByPin": "Вход по pin-коду",
+    "changePin": "Именить pin-код",
+    "setPin": "Установить pin-код",
+    "disablePin": "Отключить pin-код",
+    "loginBy": "Вход по ",
+    "ebableLoginBy": "Разрешить вход по ",
+    "pinChanged": "Pin-код успешно изменён",
+    "pinDisabled": "Pin-код отключен"
+  },
+  "touchId": "Touch ID",
+  "faceId": "Face ID",
+  "pin": {
+    "enterPin": "Введите pin-код",
+    "enterCurrentPin": "Введите текущий pin-код",
+    "createPin": "Придумайте pin-код",
+    "repeatPin": "Повторите pin-код"
+  },
+  "common": {
+    "success": "Успешно"
+  },
+  "AboutApp": {
+    "appVersion": "Версия: {{appVersion}}"
+  },
+  "ChangePassword": {
+    "confirmNewPassword": "Подтвердите новый пароль",
+    "newPassword": "Новый пароль",
+    "success": {
+      "message": "Вы сменили пароль",
+      "title": "Успешно"
+    },
+    "title": "Сменить пароль"
+  },
+  "ChangePasswordConfirm": {
+    "errors": {
+      "confirmationCodeExpired": "Код подтверждения просрочен. Вам выслан новый код",
+      "wrongConfirmationCode": "Некорректный код подтверждения"
+    },
+    "newCodeSent": "Код отправлен на ваш email",
+    "title": "Подтвердите смену пароля"
+  },
+  "ChangePin": {
+    "success": {
+      "message": "Вы сменили pin-код",
+      "title": "Успешно"
+    },
+    "title": "Сменить pin-код"
+  },
+  "Chat": {
+    "accessToCameraDenied": {
+      "close": "Закрыть",
+      "message": "Зайдите Настройки, чтобы открыть доступ",
+      "settings": "Настройки",
+      "title": "Доступ к камере запрещен"
+    },
+    "accessToGalleryDenied": {
+      "close": "Закрыть",
+      "message": "Зайдите Настройки, чтобы открыть доступ",
+      "settings": "Настройки",
+      "title": "Доступ к галерее запрещен"
+    },
+    "addAttachment": {
+      "cancel": "Отмена",
+      "takePhoto": "Снять фото",
+      "uploadDocument": "Загрузить документ",
+      "uploadMedia": "Загрузить фото/видео",
+      "uploadPhoto": "Загрузить фото"
+    },
+    "messagesPlaceholder": "Сообщений пока нет.",
+    "placeholder": "Сообщение...",
+    "routeName": "Чат с врачом",
+    "serviceMessage": "Сервисное сообщение"
+  },
+  "ConfirmVisit": {
+    "consultationPrice": "Стоимость консультации",
+    "consultationType": {
+      "offline": "Прием в клинике",
+      "online": "Онлайн",
+      "title": "Тип консультации",
+      "total": "Итого"
+    }
+  },
+  "ConfirmationCode": {
+    "codeCanBeSendOnlyAfterXSecs": {
+      "few": "Новый код может быть выслан только через {{count}} секунды",
+      "many": "Новый код может быть выслан только через {{count}} секунд",
+      "one": "Новый код может быть выслан только через {{count}} секунду",
+      "other": "Новый код может быть выслан только через {{count}} секунд"
+    }
+  },
+  "DeleteUserAccount": {
+    "confirm": "Подтвердите удаление аккаунта",
+    "errors": {
+      "mmkAlreadyExists": "Аккаунт не может быть удален, так как для него создана Мобильная медицинская карта"
+    },
+    "success": "Аккаунт удален"
+  },
+  "MMK": {
+    "noRecords": "Записей пока нет"
+  },
+  "MyConsultations": {
+    "emptyLastMessage": "Пока нет сообщений.",
+    "emptyText": "Консультаций пока нет.",
+    "routeName": "Мои консультации"
+  },
+  "settings": {
+    "deleteAccount": "Удалить аккаунт",
+    "title": "Настройки",
+    "notifications": "Настройки уведомлений",
+    "payment": "Оплата",
+    "promocodes": "Промокоды",
+    "pinAndTouchId": "Pin-код и Touch ID",
+    "pinAndFaceId": "Pin-код и Face ID",
+    "faq": "Частозадаваемые вопросы",
+    "support": "Техническая поддержка",
+    "aboutApp": "О приложении",
+    "password": "Сменить пароль"
+  },
+  "Reminders": {
+    "emptyText": "Уведомлений пока нет."
+  },
+  "SelectMedia": {
+    "accessToPhotosDenied": "Доступ к фото запрещен. Откройте доступ в настройках устройства",
+    "routeName": "Выберите фото или видео"
+  },
+  "SignUp": {
+    "errors": {
+      "blankEmail": "Email не может быть пустым",
+      "blankFirstName": "Имя не может быть пустым",
+      "blankLastName": "Фамилия не может быть пустой",
+      "blankMiddleName": "Отчество не может быть пустым",
+      "blankPassword": "Пароль не может быть пустым",
+      "blankPasswordConfirmation": "Подтверждение пароля не может быть пустым",
+      "blankPhone": "Телефон не может быть пустым",
+      "invalidFormatPhone": "Телефон имеет некорректный формат",
+      "passwordsMismatch": "Пароль и подтверждение не совпадают"
+    }
+  },
+  "Telemed": {
+    "chatsList": {
+      "noVisits": "Нет записей."
+    },
+    "activeConsultation": "Активная консультация",
+    "myConsultations": "Мои консультации",
+    "routeName": "Онлайн-консультации",
+    "tapToReturnToCall": "Коснитесь для возврата к звонку"
+  },
+  "Video": {
+    "connectionStatus": {
+      "authorizing": "Авторизуемся...",
+      "connecting": "Подключаемся..."
+    }
+  },
+  "Visit": {
+    "choises": {
+      "doctors": "Поиск врача в клиникепо ФИО",
+      "online": "Онлайн консультация,не выходя их дома"
+    }
+  },
+  "VisitSuccess": {
+    "result": {
+      "default": "Вы успешно записанына прием!",
+      "guestRequest": "Спасибо, заявка наконсультацию принята, мысвяжемся в течении 1 часа!",
+      "withPayment": "Консультация успешно оплачена!Вы записаны на приём."
+    }
+  },
+  "clinicTabs": {
+    "contacts": "Контакты",
+    "doctors": "Врачи",
+    "photos": "Фотогалерея",
+    "reviews": "Отзывы"
+  },
+  "contentState": {
+    "empty": "Запись не найдена.",
+    "error": "Произошла ошибка, повторите позже."
+  },
+  "errors": {
+    "cannotBeEmpty": {
+      "female": "не может быть пустой",
+      "male": "не может быть пустым"
+    },
+    "passwordsMismatch": "Пароли не совпадают"
+  },
+  "fastDecisions": {
+    "aboutClinic": "О клинике",
+    "ambulance": "Вызватьскорую",
+    "analyzes": "Результатыанализов",
+    "apointment": "Записаться на прием",
+    "appointment": "Записатьсяна прием",
+    "callTheClinic": "Позвонитьв клинику",
+    "chat": "Онлайн чат",
+    "child": "Заболелребенок",
+    "flu": "Простуда",
+    "head": "Болитголова",
+    "stomach": "Болитживот"
+  },
+  "fileSizeUnits": {
+    "Bytes": "Байт",
+    "EB": "ЕБ",
+    "GB": "ГБ",
+    "KB": "КБ",
+    "MB": "МБ",
+    "PB": "ПБ",
+    "TB": "ТБ",
+    "YB": "УБ",
+    "ZB": "ЗБ"
+  },
+  "invoices": {
+    "all": "Все",
+    "download": "Скачать чек",
+    "emptyListText": "Счета не найдены",
+    "errorPayment": "При оплате произошла ошибка",
+    "history": "История операций",
+    "methods": "Способы оплаты",
+    "notPaid": "Не оплачен",
+    "paid": "Оплачен",
+    "payAction": "Оплатить",
+    "payBill": "Оплатить счет",
+    "paymentTitle": "Оплата",
+    "paymentWebTitle": "Выберите метод оплаты",
+    "scoreTitle": "Счет",
+    "status": "Статус",
+    "title": "Оплата и счета",
+    "unpaid": "Не оплаченные",
+    "unpaidBills": "Неоплаченные счета"
+  },
+  "mkkRecordsFilters": {
+    "Analyze": "Анализы",
+    "Appointments": "Записи",
+    "Consultation": "Консультации",
+    "Diagnostic": "Диагностика",
+    "Other": "Прочее",
+    "Prescriptions": "Назначения",
+    "Procedure": "Процедуры",
+    "Results": "Результаты",
+    "Statement": "Выписки",
+    "Visits": "Посещения"
+  },
+  "notificationActions": {
+    "came": "Я пришел",
+    "details": "Подробнее",
+    "goToRecord": "Перейти в запись",
+    "pay": "Оплатить"
+  },
+  "notificationGroups": {
+    "all": "Все",
+    "assignments": "Назначения",
+    "directions": "Направления",
+    "mmk": "ММК",
+    "online": "Online",
+    "other": "Другое",
+    "recommendations": "Рекомендации"
+  },
+  "openInMaps": {
+    "message": "Какое приложение вы хотите использовать?",
+    "title": "Открыть в приложении Карты"
+  },
+  "picker": {
+    "doneText": "Выбрать",
+    "placeholder": "Выберите из списка"
+  },
+  "recordInfo": {
+    "date": "Дата",
+    "description": "Описание",
+    "type": "Тип"
+  },
+  "scenes": {
+    "SignInWithEmail": {
+      "headTitle": "Уже являетесь нашим пациентом?",
+      "signup": {
+        "part1": "Если вы обращаетесь к нам первый раз,вам необходимо ",
+        "part2": "зарегистрироваться."
+      },
+      "sendRequestWithoutAuth": "Оставить заявку без регистрации"
+    },
+    "ConfirmVisit": {
+      "sendRequest": "Отправить заявку"
+    },
+    "ConfirmationCode": {
+      "changeEmail": "Другой e-mail",
+      "title": {
+        "email": "Введите код подверждения отправленный на e-mail"
+      }
+    },
+    "EditProfile": {
+      "deleteAccount": {
+        "button": "Удалить профиль",
+        "confirmationModal": {
+          "message": "Действие отменить нельзя. Подтверждаете?",
+          "title": "Удаление профиля"
+        }
+      },
+      "gender": {
+        "F": "Женский",
+        "M": "Мужской"
+      },
+      "routeName": "Редактирование профиля"
+    },
+    "FastDecision": {
+      "buttons": {
+        "aboutClinic": "Подробнее",
+        "ambulance": "Вызвать скорую",
+        "analyzes": "К результатам",
+        "appointment": "Перейти к записи",
+        "callTheClinic": "Позвонить",
+        "chat": "Перейти в чат",
+        "child": "Заболелребенок",
+        "flu": "Простуда",
+        "head": "Болитголова",
+        "stomach": "Найти терапевта"
+      },
+      "text": {
+        "aboutClinic": "О клинике",
+        "ambulance": "После нажатия кнопки мы свяжем вас с дежурным оператором скорой помощи.",
+        "analyzes": "Вы можете быстро перейти к последним результатам ваших анализов.",
+        "appointment": "Записатьсяна прием",
+        "callTheClinic": "Позвонитьв клинику",
+        "chat": "Онлайн чат",
+        "child": "Заболелребенок",
+        "flu": "Простуда",
+        "head": "Болитголова",
+        "stomach": "Вероятно, потребуется приём врача-гастроэнтеролога. Но сперва необходима консультация терапевта."
+      }
+    },
+    "Home": {
+      "title": {
+        "signIn": {
+          "part1": "Для получения доступа ко всем услугамвам необходимо ",
+          "part2": "войти"
+        }
+      },
+      "visits": {
+        "title": "Записи"
+      }
+    },
+    "Profile": {
+      "card": "Карта",
+      "editProfile": "редактировать профиль",
+      "title": "Профиль"
+    },
+    "SignUpWithEmailStep1Fio": {
+      "title": "Для продолжения укажите ваши данные"
+    },
+    "SignUpWithEmailStep2Phone": {
+      "phone": "Ваш номер телефона",
+      "title": "Укажите контактый телефон"
+    },
+    "SignUpWithEmailStep3Email": {
+      "change": "Сменить",
+      "email": "Ваш email",
+      "title": "Укажите e-mail"
+    },
+    "SignUpWithEmailStep4Password": {
+      "password": "Пароль",
+      "passwordConfirmation": "Подтвердите пароль",
+      "title": "Установите пароль"
+    }
+  },
+  "specsList": {
+    "emptyText": "Список специалистов пока пуст."
+  },
+  "timeShort": {
+    "hour": "ч",
+    "min": "м",
+    "sec": "с"
+  },
+  "visitInfo": {
+    "came": "Я пришел!",
+    "cameHelp": "Удерживайте кнопку в течение 3 секунд",
+    "cancel": "Отменить запись",
+    "faster": "Получить диагноз быстрее",
+    "openChat": "Перейти в чат",
+    "tellDoctor": "Сообщите врачу о своем прибытии, чтобы он вас пригласил на приём"
+  },
+  "visitsList": {
+    "title": {
+      "offlineConsultation": "Приём у врача",
+      "onlineConsultation": "Онлайн-консультация"
+    },
+    "openVisitChat": "Перейти",
+    "orderNotPaid": "Заказ не оплачен",
+    "passedTime": "Идёт {{time}}",
+    "pay": "Оплатить"
+  },
+  "year": {
+    "few": "{{count}} года",
+    "many": "{{count}} лет",
+    "one": "{{count}} год",
+    "other": "{{count}} лет"
+  }
+}

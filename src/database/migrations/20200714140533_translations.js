@@ -15,12 +15,12 @@ exports.up = function (knex) {
       table.string("gkey").notNullable();
       table.string("tkey").notNullable();
 
-      table.text("lang_ru").notNullable();
-      table.boolean("checked_ru").notNullable().defaultTo(true);
-      table.text("lang_en").notNullable();
-      table.boolean("checked_en").notNullable().defaultTo(true);
-      table.text("lang_fr").notNullable();
-      table.boolean("checked_fr").notNullable().defaultTo(true);
+      table.text("lang_ru");
+      table.boolean("checked_ru").notNullable().defaultTo(false);
+      table.text("lang_en");
+      table.boolean("checked_en").notNullable().defaultTo(false);
+      table.text("lang_fr");
+      table.boolean("checked_fr").notNullable().defaultTo(false);
       table.unique(["pname", "gkey", "tkey"]);
       table.timestamps(false, true);
     });

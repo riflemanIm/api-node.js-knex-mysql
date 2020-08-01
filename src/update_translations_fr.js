@@ -1,31 +1,55 @@
 import fr from "./translations/fr.js";
 import db from "./config/dbConfig.js";
 
-const tryUpdate = async (d) => {
-  try {
-    const res = await db("translations")
-      .where("gkey", d.gkey)
-      .where("tkey", d.tkey)
-      .update({ lang_fr: d.lang_fr });
-    console.log("\n res:", res);
-  } catch (e) {
-    console.error("\n\n err", e);
+let parentTKeys = [];
+let oldLevel = 0;
+let level = 0;
+const transform = async (object, gkey) => {
+  for (const [tkey, obj] of Object.entries(object)) {
+    console.log("level:", level, "  oldLevel:", oldLevel);
+
+    console.log("parentTKeys", parentTKeys, parentTKeys.length);
+    if (typeof obj === "object") {
+      console.log("object");
+      parentTKeys.push(tkey);
+      level++;
+      await transform(obj, gkey);
+      level--;
+      parentTKeys = parentTKeys.slice(0, level - 1);
+    } else {
+      const fullTKey =
+        parentTKeys.length > 0 && typeof parentTKeys === "object"
+          ? `${parentTKeys.join(".")}.${tkey}`
+          : tkey;
+      console.log(
+        " gkey:",
+        gkey,
+        "\t",
+        "parentTKeys:",
+        parentTKeys,
+        "\t",
+        "tkey:",
+        fullTKey,
+        "\t",
+        "lang_conent:",
+        obj,
+
+        "\n\n"
+      );
+    }
+    oldLevel = level;
   }
 };
 
-for (const [gkey, obj] of Object.entries(fr.translations)) {
-  //  console.log(`${gkey}: `);
-  //console.log(Object.entries(value));
-  for (const [tkey, lang_fr] of Object.entries(obj)) {
-    //console.log(`${gkey}:  ${tkey}:${tvalue}`);
-    //console.log("\n");
-    const dbDate = {
-      account_id: 1,
-      pname: "mobimed_site",
-      gkey,
-      tkey,
-      lang_fr,
-    };
-    tryUpdate(dbDate);
+for (const [gkey, object] of Object.entries(fr)) {
+  parentTKeys = [];
+  if (typeof object === "string") {
+    level = 0;
+    const fobj = {};
+    fobj[`${gkey}`] = object;
+    await transform(fobj, "");
+  } else {
+    level++;
+    await transform(object, gkey);
   }
 }

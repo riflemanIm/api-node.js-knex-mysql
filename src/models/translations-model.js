@@ -50,44 +50,33 @@ const addTranslation = (translation) => {
 };
 
 // UPDATE TRANSLATION
-const updateTranslationByJSON = (id, data, checked, lang) => {
+const updateTranslationByJSON = (id, data, lang) => {
   const updated_at = localDateTime;
 
-  return checked === "true"
-    ? db("translations").where("id", id).update({
-        lang_en: data.lang_en,
-        lang_ru: data.lang_ru,
-        lang_fr: data.lang_fr,
-        checked_en,
-        checked_ru: true,
-        checked_fr: true,
-        updated_at,
-      })
-    : db("translations")
-        .first()
-        .where("id", id)
-        .then((old) => {
-          if (lang === "ru") {
-            const checked_ru = data.lang_ru === old.lang_ru;
-
-            return db("translations")
-              .where("id", id)
-              .update({ ...data, checked_ru, updated_at });
-          }
-          if (lang === "en") {
-            const checked_en = data.lang_en === old.lang_en;
-            return db("translations")
-              .where("id", id)
-              .update({ ...data, checked_en, updated_at });
-          }
-          if (lang === "fr") {
-            const checked_fr = data.lang_fr === old.lang_fr;
-            console.log("checked_fr", checked_fr);
-            return db("translations")
-              .where("id", id)
-              .update({ ...data, checked_fr, updated_at });
-          }
-        });
+  return db("translations")
+    .first()
+    .where("id", id)
+    .then((old) => {
+      if (lang === "ru") {
+        const checked_ru = old.account_id === 26; //
+        console.log("checked_ru", checked_ru);
+        return db("translations")
+          .where("id", id)
+          .update({ ...data, checked_ru, updated_at });
+      }
+      if (lang === "en") {
+        const checked_en = old.checked_en && old.account_id === 26;
+        return db("translations")
+          .where("id", id)
+          .update({ ...data, checked_en, updated_at });
+      }
+      if (lang === "fr") {
+        const checked_fr = old.checked_fr && old.account_id === 26;
+        return db("translations")
+          .where("id", id)
+          .update({ ...data, checked_fr, updated_at });
+      }
+    });
 
   //return db("translations").where("id", id).update(data);
 };
@@ -95,7 +84,7 @@ const updateTranslationByJSON = (id, data, checked, lang) => {
 // UPDATE CHECKEDS
 const updateChecked = (post) => {
   const updated_at = localDateTime;
-  const { selected, checked_en, checked_ru, checked_fr } = post;
+  const { selected, checked_en, checked_ru, checked_fr, account_id } = post;
   console.log("ids \n\n ", selected);
 
   return db("translations").whereIn("id", selected).update({
@@ -103,6 +92,7 @@ const updateChecked = (post) => {
     checked_en,
     checked_ru,
     checked_fr,
+    account_id,
   });
 };
 
@@ -159,7 +149,6 @@ const saveTranslation = (
         const translation = updateTranslationByJSON(
           r.id,
           defLangObj(lang, lang_conent, checked),
-          checked,
           lang
         );
         //console.log("\n ------- translation update ------\n", translation);

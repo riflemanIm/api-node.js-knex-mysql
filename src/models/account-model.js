@@ -6,5 +6,8 @@ export const findByEmail = (email) => {
   return db("account")
     .where("email", email)
     .first()
-    .then((row) => row);
+    .then((row) => row)
+    .catch((err) => {
+      console.log("Err findByEmail:", err);
+    });
 };

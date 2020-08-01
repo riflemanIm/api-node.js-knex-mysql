@@ -1,0 +1,122 @@
+{
+  "Ponyatno": "Clair",
+  "birthDate": "Дата рождения",
+  "Optional": "не обязательно",
+  "errors": {
+    "cannotBeEmpty": {
+      "aa": "не может быть пустым",
+      "bb": {
+        "ddd": "не может быть пустым",
+        "eee": {
+          "wwww": "не может быть пустым",
+          "rrrr": "не может быть пустой"
+        }
+      }
+    },
+    "passwordsMismatch": "Le mot de passe n'est pas correct"
+  },
+  "scenes": {
+    "SignInWithEmail": {
+      "headTitle": "Уже являетесь нашим пациентом?",
+      "signup": {
+        "part1": "Если вы обращаетесь к нам первый раз,\nвам необходимо ",
+        "part2": "зарегистрироваться."
+      },
+      "sendRequestWithoutAuth": "Оставить заявку без регистрации"
+    },
+    "SignUpWithEmailStep1Fio": {
+      "title": "Для продолжения укажите ваши данные"
+    },
+    "SignUpWithEmailStep2Phone": {
+      "title": "Укажите контактый телефон",
+      "phone": "Ваш номер телефона"
+    },
+    "SignUpWithEmailStep3Email": {
+      "title": "Укажите e-mail",
+      "email": "Ваш email",
+      "change": "Сменить"
+    },
+    "SignUpWithEmailStep4Password": {
+      "title": "Установите пароль",
+      "password": "Пароль",
+      "passwordConfirmation": "Подтвердите пароль"
+    },
+    "ConfirmationCode": {
+      "title": {
+        "email": "Введите код подверждения отправленный на e-mail"
+      },
+      "changeEmail": "Другой e-mail"
+    },
+    "Home": {
+      "title": {
+        "signIn": {
+          "part1": "Для получения доступа ко всем услугам\nвам необходимо ",
+          "part2": "войти"
+        }
+      },
+      "visits": {
+        "title": "Записи"
+      }
+    },
+    "ConfirmVisit": {
+      "sendRequest": "Отправить заявку"
+    },
+    "FastDecision": {
+      "text": {
+        "flu": "Простуда",
+        "child": "Заболел\nребенок",
+        "head": "Болит\nголова",
+        "ambulance": "Nous vous connecterons avec l’opérateur du SAMU après avoir cliqué sur le bouton.",
+        "stomach": "Vous aurez probablement besoin d'une consultation avec un gastro-entérologue. Mais une consultation avec un généraliste est préalablement nécessaire.",
+        "analyzes": "Vous pouvez rapidement consulter les derniers résultats de vos analyses.",
+        "callTheClinic": "Позвонить\nв клинику",
+        "chat": "Онлайн чат",
+        "appointment": "Записаться\nна прием",
+        "aboutClinic": "О клинике"
+      },
+      "buttons": {
+        "flu": "Простуда",
+        "child": "Заболел\nребенок",
+        "head": "Болит\nголова",
+        "ambulance": "Appeler le SAMU",
+        "stomach": "Trouver un généraliste",
+        "analyzes": "Aux résultats",
+        "callTheClinic": "Позвонить",
+        "chat": "Перейти в чат",
+        "appointment": "Перейти к записи",
+        "aboutClinic": "Подробнее"
+      }
+    },
+    "Profile": {
+      "title": "Профиль",
+      "editProfile": "редактировать профиль",
+      "card": "Card"
+    },
+    "EditProfile": {
+      "routeName": "Редактирование профиля",
+      "gender": {
+        "M": "Мужской",
+        "F": "Женский"
+      },
+      "deleteAccount": {
+        "button": "Удалить профиль",
+        "confirmationModal": {
+          "title": "Удаление профиля",
+          "message": "Действие отменить нельзя. Подтверждаете?"
+        }
+      }
+    }
+  },
+  "ProfileSettings": {
+    "title": "Настройки",
+    "deleteAccount": "Удалить аккаунт"
+  },
+  "DeleteUserAccount": {
+    "confirm": "Подтвердите удаление аккаунта",
+    "success": "Аккаунт удален",
+    "errors": {
+      "mmkAlreadyExists": "Аккаунт не может быть удален, так как для него создана Мобильная медицинская карта"
+    }
+  },
+  "Password": "Пароль"
+}

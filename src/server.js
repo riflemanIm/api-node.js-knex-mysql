@@ -22,7 +22,6 @@ server.use(
 );
 
 server.use(cors());
-
 server.use(morgan("dev"));
 server.use(express.json());
 
