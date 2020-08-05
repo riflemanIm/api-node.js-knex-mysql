@@ -15,6 +15,15 @@ router.get("/", async (req, res) => {
     res.status(500).json({ err });
   }
 });
+router.get("/backups", async (req, res) => {
+  try {
+    const backups = await translationsDB.findBackupsTranslations();
+    console.log("\n backups \n", backups);
+    res.status(200).json(backups);
+  } catch (err) {
+    res.status(500).json({ err: err.message });
+  }
+});
 
 // GET TRANSLATION BY ID
 router.get("/:id", async (req, res) => {
@@ -96,32 +105,47 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
     } else {
       //Use the name of the input field (i.e. "filename") to retrieve the uploaded file
       const { buffer } = req.file;
-      const { filename, pname, account_id, checked } = req.body;
-      const translationId = req.params.id;
-      const translation = JSON.parse(buffer.toString("utf8"));
+      const {
+        filename,
+        pname,
+        account_id,
+        checked,
+        deleteOldKeys,
+        doBackup,
+      } = req.body;
 
+      console.log("doBackup", doBackup);
+      if (doBackup === "true") {
+        await translationsDB.backupTranslations(pname);
+      }
+
+      if (deleteOldKeys === "true")
+        await translationsDB.removeTranslationsByPName(pname);
+
+      const translation = JSON.parse(buffer.toString("utf8"));
       const lang = filename.split(".")[0];
+
       let parentTKeys = [];
-      let oldLevel = 0;
       let level = 0;
       const transform = (object, gkey) => {
         for (const [tkey, obj] of Object.entries(object)) {
-          //console.log("level:", level, "  oldLevel:", oldLevel);
+          //console.log("level:", level);
+          if (tkey.includes(".")) {
+            throw new Error("Can't use dot in key name");
+          }
 
           //console.log("parentTKeys", parentTKeys, parentTKeys.length);
           if (typeof obj === "object") {
-            console.log("object");
             parentTKeys.push(tkey);
             level++;
             transform(obj, gkey);
-
-            parentTKeys = parentTKeys.slice(0, level);
+            level--;
           } else {
             const fullTKey =
               parentTKeys.length > 0 && typeof parentTKeys === "object"
                 ? `${parentTKeys.join(".")}.${tkey}`
                 : tkey;
-            //console.log(fullTKey, "\t", "\n\n");
+            //console.log(fullTKey);
             if (tkey !== "")
               translationsDB.saveTranslation(
                 gkey,
@@ -133,20 +157,23 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
                 lang
               );
           }
-          oldLevel = level;
-          level--;
+          parentTKeys = parentTKeys.slice(0, level);
         }
       };
 
       for (const [gkey, object] of Object.entries(translation)) {
-        parentTKeys = [];
+        //parentTKeys = [];
+        //console.log("----------------------- ");
+        level = 0;
+        if (gkey.includes(".")) {
+          throw new Error("Can't use dot in key name");
+        }
         if (typeof object === "string") {
-          level = 0;
           const fobj = {};
           fobj[`${gkey}`] = object;
+
           transform(fobj, "");
         } else {
-          level++;
           transform(object, gkey);
         }
       }

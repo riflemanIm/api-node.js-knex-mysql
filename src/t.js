@@ -1,48 +1,39 @@
-import ddd from "./translations/fr.json";
+import ddd from "./translations/ru.json";
 
 let parentTKeys = [];
-let oldLevel = 0;
 let level = 0;
 const transform = (object, gkey) => {
   for (const [tkey, obj] of Object.entries(object)) {
-    //console.log("level:", level, "  oldLevel:", oldLevel);
+    //console.log("level:", level);
 
-    console.log("parentTKeys", parentTKeys, parentTKeys.length);
+    //console.log("parentTKeys", parentTKeys, parentTKeys.length);
     if (typeof obj === "object") {
-      console.log("object");
       parentTKeys.push(tkey);
       level++;
       transform(obj, gkey);
-
-      parentTKeys = parentTKeys.slice(0, level);
+      level--;
     } else {
       const fullTKey =
         parentTKeys.length > 0 && typeof parentTKeys === "object"
           ? `${parentTKeys.join(".")}.${tkey}`
           : tkey;
-      console.log(
-        fullTKey,
-        "\t",
-        "lang_conent:",
-        obj,
-
-        "\n\n"
-      );
+      console.log(fullTKey);
     }
-    oldLevel = level;
-    level--;
+    parentTKeys = parentTKeys.slice(0, level);
   }
 };
 
 for (const [gkey, object] of Object.entries(ddd)) {
-  parentTKeys = [];
+  //parentTKeys = [];
+  console.log("----------------------- ");
+  level = 0;
+
   if (typeof object === "string") {
-    level = 0;
     const fobj = {};
     fobj[`${gkey}`] = object;
+
     transform(fobj, "");
   } else {
-    level++;
     transform(object, gkey);
   }
 }

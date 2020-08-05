@@ -18,6 +18,8 @@ const find = () => {
       "t.checked_fr",
       "t.created_at",
       "t.updated_at",
+      "t.account_id",
+
       "a.email",
       "a.fname",
       "a.lname"
@@ -37,6 +39,10 @@ const findByKeys = (pname, gkey, tkey) => {
     .where("tkey", tkey)
     .first();
 };
+const findByPName = (pname) => {
+  return db("translations").where("pname", pname);
+};
+
 const findByLangPName = (lang, pname) => {
   return db
     .select("gkey", "tkey", `lang_${lang}`)
@@ -44,6 +50,7 @@ const findByLangPName = (lang, pname) => {
     .where("pname", pname)
     .orderBy([{ column: "gkey" }, { column: "tkey" }]);
 };
+
 // ADD A TRANSLATION
 const addTranslation = (translation) => {
   return db("translations").insert(translation);
@@ -59,7 +66,7 @@ const updateTranslationByJSON = (id, data, lang) => {
     .then((old) => {
       if (lang === "ru") {
         const checked_ru = old.account_id === 26; //
-        console.log("checked_ru", checked_ru);
+
         return db("translations")
           .where("id", id)
           .update({ ...data, checked_ru, updated_at });
@@ -176,16 +183,36 @@ const saveTranslation = (
 const removeTranslation = (id) => {
   return db("translations").where("id", id).del();
 };
+const removeTranslationsByPName = (pname) => {
+  return db("translations").where("pname", pname).del();
+};
+
+const backupTranslations = (pname) => {
+  return findByPName(pname).then((r) => {
+    return db("translations_backup").insert(r);
+  });
+};
+// GET ALL TRANSLATIONS
+const findBackupsTranslations = () => {
+  return db
+    .select("backuped_at")
+    .from("translations_backup")
+    .groupBy("backuped_at");
+};
 
 module.exports = {
   find,
   findById,
   findByKeys,
+  findByPName,
   findByLangPName,
   addTranslation,
   updateTranslation,
   updateChecked,
   updateTranslationByJSON,
   removeTranslation,
+  removeTranslationsByPName,
   saveTranslation,
+  backupTranslations,
+  findBackupsTranslations,
 };
