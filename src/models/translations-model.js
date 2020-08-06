@@ -183,6 +183,7 @@ const saveTranslation = (
 const removeTranslation = (id) => {
   return db("translations").where("id", id).del();
 };
+
 const removeTranslationsByPName = (pname) => {
   return db("translations").where("pname", pname).del();
 };
@@ -192,12 +193,108 @@ const backupTranslations = (pname) => {
     return db("translations_backup").insert(r);
   });
 };
-// GET ALL TRANSLATIONS
+
 const findBackupsTranslations = () => {
   return db
-    .select("backuped_at")
+    .select("pname", "backuped_at")
     .from("translations_backup")
-    .groupBy("backuped_at");
+    .groupBy("pname", "backuped_at")
+    .orderBy("backuped_at", "desc");
+};
+
+const restoreBackup = (backup) => {
+  const [pname, backuped_at_str] = backup.split("__");
+  const backuped_at = new Date(backuped_at_str);
+
+  return db("translations_backup")
+    .where("pname", pname)
+    .where("backuped_at", backuped_at)
+    .then((res) => {
+      return db
+        .transaction(function (trx) {
+          const queries = [];
+          const ids = [];
+
+          res.forEach((item) => {
+            const {
+              id,
+              account_id,
+              pname,
+              gkey,
+              tkey,
+              lang_ru,
+              checked_ru,
+              lang_en,
+              checked_en,
+              lang_fr,
+              checked_fr,
+              created_at,
+              updated_at,
+            } = item;
+            ids.push(id);
+
+            const query = db("translations")
+              .where("id", item.id)
+              .first()
+              .then((ed) => {
+                if (ed != null) {
+                  //console.log(" update ");
+                  return db("translations")
+                    .where("id", ed.id)
+                    .update({
+                      account_id,
+                      pname,
+                      gkey,
+                      tkey,
+                      lang_ru,
+                      checked_ru,
+                      lang_en,
+                      checked_en,
+                      lang_fr,
+                      checked_fr,
+                      created_at,
+                      updated_at,
+                    })
+                    .transacting(trx);
+                } else {
+                  return db("translations")
+                    .insert({
+                      id,
+                      account_id,
+                      pname,
+                      gkey,
+                      tkey,
+                      lang_ru,
+                      checked_ru,
+                      lang_en,
+                      checked_en,
+                      lang_fr,
+                      checked_fr,
+                      created_at,
+                      updated_at,
+                    })
+                    .transacting(trx);
+                }
+              });
+
+            queries.push(query);
+          });
+
+          // remove excess translations
+          const query = db("translations")
+            .where("pname", pname)
+            .whereNotIn("id", ids)
+            .del()
+            .transacting(trx);
+          queries.unshift(query);
+
+          Promise.all(queries).then(trx.commit).catch(trx.rollback);
+        })
+        .then(() => "ok")
+        .catch((e) => {
+          throw new Error(e);
+        });
+    });
 };
 
 module.exports = {
@@ -215,4 +312,5 @@ module.exports = {
   saveTranslation,
   backupTranslations,
   findBackupsTranslations,
+  restoreBackup,
 };

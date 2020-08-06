@@ -20,6 +20,7 @@ exports.up = function (knex) {
 
       table.timestamps(false, true);
       table.timestamp("backuped_at").defaultTo(knex.fn.now());
+      table.unique(["pname", "gkey", "tkey", "backuped_at"]);
     });
 };
 

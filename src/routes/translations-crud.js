@@ -15,6 +15,8 @@ router.get("/", async (req, res) => {
     res.status(500).json({ err });
   }
 });
+
+// GET ALL BACKAPS
 router.get("/backups", async (req, res) => {
   try {
     const backups = await translationsDB.findBackupsTranslations();
@@ -114,10 +116,7 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
         doBackup,
       } = req.body;
 
-      console.log("doBackup", doBackup);
-      if (doBackup === "true") {
-        await translationsDB.backupTranslations(pname);
-      }
+      if (doBackup === "true") await translationsDB.backupTranslations(pname);
 
       if (deleteOldKeys === "true")
         await translationsDB.removeTranslationsByPName(pname);
@@ -188,26 +187,26 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
   }
 });
 
-// INSERT TRANSLATION INTO DB
-// router.post("/", async (req, res) => {
-//   const newTranslation = req.body.data;
-//   console.log("newTranslation", newTranslation);
-//   try {
-//     translation = await translationsDB.addTranslation(newTranslation);
-//     console.log("\n\n\n addTranslation '" + translation + "' \n\n\n");
-//     res.status(201).json(translation);
-//   } catch (err) {
-//     res.status(500).json({ err: "Error in adding translation" });
-//   }
-// });
-
+// SET VERIFIED LANGS OR NOT
 router.put("/checked", async (req, res) => {
   const post = req.body.data;
-
   try {
     const checkeds = await translationsDB.updateChecked(post);
     console.log("\n checkeds \n", checkeds);
     res.status(200).json(checkeds);
+  } catch (err) {
+    res.status(500).json({ err: err.message });
+  }
+});
+
+// RESTORE BACKUP
+router.put("/restorebackup", async (req, res) => {
+  const post = req.body.data;
+
+  try {
+    const r = await translationsDB.restoreBackup(post);
+    console.log("\n resrored \n", r);
+    res.status(200).json(r);
   } catch (err) {
     res.status(500).json({ err: err.message });
   }
@@ -222,7 +221,7 @@ router.put("/:id", async (req, res) => {
       translationId,
       newChanges
     );
-    console.log("\n addChangesdddd \n", translationId, addChanges);
+    //console.log("\n addChanges \n", translationId, addChanges);
     res.status(200).json(addChanges);
   } catch (err) {
     res.status(500).json({ err: err.message });
