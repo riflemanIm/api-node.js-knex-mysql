@@ -111,7 +111,7 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
         filename,
         pname,
         account_id,
-        checked,
+
         deleteOldKeys,
         doBackup,
       } = req.body;
@@ -152,7 +152,6 @@ router.put("/import-file", upload.single("filedata"), async (req, res) => {
                 pname,
                 obj,
                 account_id,
-                checked === "true" ? true : false,
                 lang
               );
           }

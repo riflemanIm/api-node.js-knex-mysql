@@ -65,20 +65,20 @@ const updateTranslationByJSON = (id, data, lang) => {
     .where("id", id)
     .then((old) => {
       if (lang === "ru") {
-        const checked_ru = old.account_id === 26; //
+        const checked_ru = old.checked_en; //
 
         return db("translations")
           .where("id", id)
           .update({ ...data, checked_ru, updated_at });
       }
       if (lang === "en") {
-        const checked_en = old.checked_en && old.account_id === 26;
+        const checked_en = old.checked_en;
         return db("translations")
           .where("id", id)
           .update({ ...data, checked_en, updated_at });
       }
       if (lang === "fr") {
-        const checked_fr = old.checked_fr && old.account_id === 26;
+        const checked_fr = old.checked_fr;
         return db("translations")
           .where("id", id)
           .update({ ...data, checked_fr, updated_at });
@@ -141,21 +141,13 @@ const updateTranslation = (id, post) => {
   //return db("translations").where("id", id).update(post);
 };
 
-const saveTranslation = (
-  gkey,
-  tkey,
-  pname,
-  lang_conent,
-  account_id,
-  checked,
-  lang
-) => {
+const saveTranslation = (gkey, tkey, pname, lang_conent, account_id, lang) => {
   return findByKeys(pname, gkey, tkey)
     .then((r) => {
       if (r) {
         const translation = updateTranslationByJSON(
           r.id,
-          defLangObj(lang, lang_conent, checked),
+          defLangObj(lang, lang_conent, false),
           lang
         );
         //console.log("\n ------- translation update ------\n", translation);
@@ -166,7 +158,7 @@ const saveTranslation = (
           pname,
           gkey,
           tkey,
-          ...defLangObj(lang, lang_conent, checked),
+          ...defLangObj(lang, lang_conent, false),
         };
 
         const translation = addTranslation(data);
