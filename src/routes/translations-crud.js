@@ -62,13 +62,13 @@ router.get("/download/:lang/:pname", async (req, res) => {
             ...obj,
             [item.gkey]: {
               ...obj[item.gkey],
-              [item.tkey]: item[`lang_${lang}`].replace(/(\r\n|\n|\r)/gm, ""),
+              [item.tkey]: item[`lang_${lang}`].trim(),
             },
           };
         }
         return {
           ...obj,
-          [item.tkey]: item[`lang_${lang}`].replace(/(\r\n|\n|\r)/gm, ""),
+          [item.tkey]: item[`lang_${lang}`].trim(),
         };
       }, {});
       //console.log("\n\n\n -- object --- \n\n\n", object);
